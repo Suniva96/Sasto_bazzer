@@ -37,7 +37,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'SatoBazzer.urls'
+ROOT_URLCONF = 'SastoBazzer.urls'
 
 TEMPLATES = [
     {
@@ -54,7 +54,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'SatoBazzer.wsgi.application'
+WSGI_APPLICATION = 'SastoBazzer.wsgi.application'
 
 # Database
 
