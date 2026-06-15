@@ -312,26 +312,114 @@ nav{
 }
 
 /* ── FOOTER ── */
-footer{
-    background:#1e5428;
-    color:white;
-    padding:50px 40px;
-    margin-top:50px;
+.footer {
+    background: linear-gradient(135deg, #07131d, #0c1f2d);
+    color: white;
+    padding: 50px 40px 20px;
+    font-family: Arial, sans-serif;
 }
 
-.footer-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:30px;
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
 }
 
-footer h3{
-    margin-bottom:12px;
+.footer-column h2 {
+    margin-bottom: 15px;
 }
 
-footer p{
-    margin-top:8px;
-    font-size:14px;
+.footer-column h2 span {
+    color: #42c84d;
+}
+
+.footer-column h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.footer-column p {
+    color: #d0d0d0;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #d0d0d0;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #42c84d;
+    padding-left: 5px;
+}
+
+.newsletter input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #333;
+    background: transparent;
+    color: white;
+    border-radius: 6px;
+}
+
+.newsletter button {
+    width: 100%;
+    padding: 12px;
+    background: #42c84d;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background: #36b441;
+}
+
+.footer hr {
+    border: none;
+    border-top: 1px solid #2c3b48;
+    margin: 30px 0 20px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-bottom p {
+    color: #d0d0d0;
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #d0d0d0;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #42c84d;
 }
 
 /* ── MOBILE ── */
