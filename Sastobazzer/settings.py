@@ -64,8 +64,8 @@ DATABASES = {
         'NAME': 'sastobazzar_db',
         'USER': 'root',
         'PASSWORD': 'sunivamunikar63',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'HOST': '127.0.0.1',
+        'PORT': '3307',
     }
 }
 
