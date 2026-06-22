@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up – SastoBazaar</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: sans-serif; background: #f5f7f5; }
+  nav { background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; height: 65px; display: flex; align-items: center; gap: 1.5rem; }
+  .logo { font-size: 1.4rem; font-weight: 800; color: #1a1a1a; text-decoration: none; display: flex; align-items: center; gap: 0.4rem; }
+  .logo i { color: #2e7d32; }
+  .logo span { color: #2e7d32; }
+  .search-wrap { flex: 1; display: flex; max-width: 420px; }
+  .search-wrap input { flex: 1; padding: 0.5rem 0.9rem; border: 1.5px solid #ddd; border-right: none; border-radius: 8px 0 0 8px; font-size: 0.9rem; outline: none; }
+  .search-wrap button { padding: 0.5rem 0.9rem; background: #2e7d32; color: #fff; border: none; border-radius: 0 8px 8px 0; cursor: pointer; }
+  .nav-links { list-style: none; display: flex; align-items: center; gap: 0.2rem; margin-left: auto; }
+  .nav-links a { padding: 0.5rem 0.8rem; color: #333; text-decoration: none; font-size: 0.92rem; border-radius: 6px; display: flex; align-items: center; gap: 0.4rem; }
+  .nav-links a:hover, .nav-links a.active { color: #2e7d32; background: #e8f5e9; }
+  .auth-wrapper { min-height: calc(100vh - 65px); display: flex; align-items: center; justify-content: center; padding: 2rem 1rem; }
+  .auth-card { background: #fff; border-radius: 14px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); padding: 2.5rem 2rem; width: 100%; max-width: 420px; }
+  .auth-header { text-align: center; margin-bottom: 2rem; }
+  .auth-header i { font-size: 2.2rem; color: #2e7d32; }
+  .auth-header h1 { font-size: 1.6rem; font-weight: 700; margin: 0.4rem 0 0.2rem; }
+  .auth-header p { color: #666; font-size: 0.92rem; }
+  .form-group { margin-bottom: 1.1rem; }
+  .form-group label { display: block; font-size: 0.88rem; font-weight: 600; color: #333; margin-bottom: 0.4rem; }
+  .input-wrap { position: relative; }
+  .input-wrap i { position: absolute; left: 13px; top: 50%; transform: translateY(-50%); color: #888; font-size: 0.9rem; }
+  .input-wrap input { width: 100%; padding: 0.65rem 0.9rem 0.65rem 2.4rem; border: 1.5px solid #ddd; border-radius: 8px; font-size: 0.95rem; outline: none; background: #fafafa; }
+  .input-wrap input:focus { border-color: #43a047; background: #fff; }
+  .field-error { display: none; color: #c62828; font-size: 0.82rem; margin-top: 0.3rem; }
+  .auth-btn { width: 100%; padding: 0.75rem; background: #2e7d32; color: #fff; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 0.5rem; }
+  .auth-btn:hover { background: #1b5e20; }
+  .auth-switch { text-align: center; margin-top: 1.2rem; font-size: 0.92rem; color: #555; }
+  .auth-switch a { color: #2e7d32; font-weight: 600; text-decoration: none; }
+  .auth-switch a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+ 
+<nav>
+  <div class="nav-inner">
+    <a href="Homepage.html" class="logo"><i class="fa-solid fa-bag-shopping"></i> Sasto<span>Bazaar</span></a>
+    <div class="search-wrap">
+      <input type="text" placeholder="Search products...">
+      <button><i class="fa fa-search"></i></button>
+    </div>
+    <ul class="nav-links">
+      <li><a href="Homepage.html"><i class="fa fa-house"></i> Home</a></li>
+      <li><a href="aboutus.html"><i class="fa fa-circle-info"></i> About</a></li>
+      <li><a href="#"><i class="fa fa-heart"></i> Wishlist</a></li>
+      <li><a href="#"><i class="fa fa-cart-shopping"></i> Cart</a></li>
+      <li><a href="login.html" class="active"><i class="fa fa-user"></i> Account</a></li>
+    </ul>
+  </div>
+</nav>
+ 
+<div class="auth-wrapper">
+  <div class="auth-card">
+ 
+    <div class="auth-header">
+      <i class="fa-solid fa-bag-shopping"></i>
+      <h1>Create account</h1>
+      <p>Join SastoBazaar and start buying & selling</p>
+    </div>
+ 
+    <div class="form-group">
+      <label>Full Name</label>
+      <div class="input-wrap">
+        <i class="fa fa-id-card"></i>
+        <input type="text" id="fullname" placeholder="Enter your full name">
+      </div>
+      <span class="field-error" id="err-fullname">Full name is required.</span>
+    </div>
+ 
+    <div class="form-group">
+      <label>Email</label>
+      <div class="input-wrap">
+        <i class="fa fa-envelope"></i>
+        <input type="email" id="email" placeholder="Enter your email">
+      </div>
+      <span class="field-error" id="err-email">Please enter a valid email address.</span>
+    </div>
+ 
+    <div class="form-group">
+      <label>Password</label>
+      <div class="input-wrap">
+        <i class="fa fa-lock"></i>
+        <input type="password" id="password" placeholder="Create a password (min 6 chars)">
+      </div>
+      <span class="field-error" id="err-password">Password must be at least 6 characters.</span>
+    </div>
+ 
+    <div class="form-group">
+      <label>Confirm Password</label>
+      <div class="input-wrap">
+        <i class="fa fa-lock"></i>
+        <input type="password" id="confirm" placeholder="Re-enter your password">
+      </div>
+      <span class="field-error" id="err-confirm">Passwords do not match.</span>
+    </div>
+ 
+    <button class="auth-btn" onclick="doSignup()">
+      <i class="fa fa-user-plus"></i> Create Account
+    </button>
+ 
+    <p class="auth-switch">Already have an account? <a href="login.html">Login</a></p>
+ 
+  </div>
+</div>
+ 
+<script>
+function doSignup() {
+  const fullname = document.getElementById('fullname').value.trim();
+  const email    = document.getElementById('email').value.trim();
+  const password = document.getElementById('password').value.trim();
+  const confirm  = document.getElementById('confirm').value.trim();
+  let valid = true;
+ 
+  // Hide all errors first
+  ['fullname','email','password','confirm'].forEach(id => {
+    document.getElementById('err-' + id).style.display = 'none';
+  });
+ 
+  if (!fullname) { document.getElementById('err-fullname').style.display = 'block'; valid = false; }
+ 
+  const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  if (!email || !emailOk) { document.getElementById('err-email').style.display = 'block'; valid = false; }
+ 
+  if (!password || password.length < 6) { document.getElementById('err-password').style.display = 'block'; valid = false; }
+ 
+  if (!confirm || password !== confirm) { document.getElementById('err-confirm').style.display = 'block'; valid = false; }
+ 
+  if (valid) {
+    window.location.href = 'login.html';
+  }
+}
+</script>
+ 
+</body>
+</html>
+ 
