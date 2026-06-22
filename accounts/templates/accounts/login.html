@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Login – SastoBazaar{% endblock %}
+
+{% block content %}
+<div class="auth-wrapper">
+
+  <div class="auth-card">
+
+    <div class="auth-header">
+      <i class="fa-solid fa-bag-shopping auth-logo-icon"></i>
+      <h1>Welcome back</h1>
+      <p>Login to your SastoBazaar account</p>
+    </div>
+
+    <form method="POST" action="{% url 'login' %}" novalidate>
+      {% csrf_token %}
+
+      <div class="form-group">
+        <label for="username">Email or Username</label>
+        <div class="input-wrap">
+          <i class="fa fa-user"></i>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Enter your email or username"
+            value="{{ username_value|default:'' }}"
+          >
+        </div>
+        {% if errors.username %}
+          <span class="field-error">{{ errors.username }}</span>
+        {% endif %}
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <div class="input-wrap">
+          <i class="fa fa-lock"></i>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+          >
+        </div>
+        {% if errors.password %}
+          <span class="field-error">{{ errors.password }}</span>
+        {% endif %}
+      </div>
+
+      {% if errors.general %}
+        <div class="alert-error">
+          <i class="fa fa-circle-exclamation"></i>
+          {{ errors.general }}
+        </div>
+      {% endif %}
+
+      <button type="submit" class="auth-btn">
+        <i class="fa fa-right-to-bracket"></i>
+        Login
+      </button>
+
+    </form>
+
+    <p class="auth-switch">
+      Don't have an account?
+      <a href="{% url 'signup' %}">Sign up</a>
+    </p>
+
+  </div>
+
+</div>
+{% endblock %}
