@@ -1,455 +1,675 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SastoBazaar</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-/* RESET */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-}
+    <title>Explore Products | SastoBazaar</title>
 
-body{
-    background:#f4f6f9;
-    padding-top:70px;
-}
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-/* NAVBAR */
-.nav{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:70px;
-    background:white;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
-    z-index:1000;
-}
+    <!-- Category CSS -->
+    <link rel="stylesheet" href="../static/css/category.css">
 
-/* NAV INNER */
-.nav-inner{
-    height:100%;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:0 25px;
-    gap:20px;
-}
-
-/* LOGO */
-.logo{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    text-decoration:none;
-    font-size:22px;
-    font-weight:bold;
-    color:#333;
-    flex-shrink:0;
-}
-
-.logo span{
-    color:#268c4d;
-}
-
-/* SEARCH BAR FIXED */
-.search-wrap{
-    flex:1;
-    max-width:425px;
-    display:flex;
-    align-items:center;
-    border:1px solid #ddd;
-    border-radius:25px;
-    overflow:hidden;
-    background:#fff;
-    height:40px;
-}
-
-.search-wrap input{
-    flex:1;
-    border:none;
-    outline:none;
-    padding:0 13px;
-    font-size:14px;
-}
-
-.search-wrap button{
-    width:50px;
-    height:100%;
-    border:none;
-    background:#2d7a3a;
-    color:white;
-    cursor:pointer;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-shrink:0;
-}
-
-.search-wrap button:hover{
-    background:#23632f;
-}
-
-/* NAV LINKS */
-.nav-links{
-    list-style:none;
-    display:flex;
-    align-items:center;
-    gap:15px;
-    flex-shrink:0;
-}
-
-.nav-links a{
-    text-decoration:none;
-    color:#333;
-    font-size:14px;
-    display:flex;
-    align-items:center;
-    gap:6px;
-    padding:8px 10px;
-    transition:0.3s;
-}
-
-.nav-links a:hover{
-    color:#2d7a3a;
-}
-
-/* MOBILE FIX */
-@media(max-width:768px){
-    .nav-inner{
-        flex-direction:column;
-        align-items:flex-start;
-        height:auto;
-        padding:10px 15px;
-    }
-
-    .search-wrap{
-        width:100%;
-        max-width:100%;
-    }
-
-    .nav-links{
-        flex-wrap:wrap;
-    }
-}
-
-/* HERO */
-.hero{
-    width:100%;
-    height:250px;
-}
-
-.hero img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-/* MAIN */
-.container{
-    display:flex;
-    gap:20px;
-    padding:20px;
-}
-
-/* SIDEBAR */
-.sidebar{
-    width:220px;
-    background:#fff;
-    padding:20px;
-    border-radius:12px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
-    height:fit-content;
-}
-
-.sidebar h3{
-    margin-bottom:15px;
-    color:#2d7a3a;
-}
-
-.sidebar a{
-    display:block;
-    text-decoration:none;
-    color:#444;
-    padding:10px;
-    margin-bottom:8px;
-    border-radius:8px;
-    transition:.3s;
-}
-
-.sidebar a:hover,
-.sidebar a.active{
-    background:#2d7a3a;
-    color:#fff;
-}
-
-/* PRODUCTS */
-.products{
-    flex:1;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-    gap:20px;
-}
-
-.card{
-    background:white;
-    border-radius:10px;
-    overflow:hidden;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-}
-
-.card img{
-    width:100%;
-    height:180px;
-    object-fit:cover;
-}
-
-.content{
-    padding:15px;
-}
-
-.category{
-    display:inline-block;
-    background:#2d7a3a;
-    color:white;
-    padding:4px 8px;
-    border-radius:5px;
-    font-size:12px;
-    margin-bottom:8px;
-}
-
-.price{
-    color:green;
-    font-weight:bold;
-    margin-top:8px;
-}
-
-button{
-    width:100%;
-    padding:10px;
-    margin-top:10px;
-    border:none;
-    background:#1e88e5;
-    color:white;
-    border-radius:5px;
-    cursor:pointer;
-}
-
-button:hover{
-    background:#1565c0;
-}
-
-/* FOOTER */
-.footer {
-    background: linear-gradient(135deg, #07131d, #0c1f2d);
-    color: white;
-    padding: 30px 25px 15px;
-}
-
-.footer-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 20px;
-}
-
-.footer-column h2{
-    font-size:18px;
-}
-
-.footer-column h3{
-    font-size:15px;
-    margin-bottom:10px;
-}
-
-.footer-column p,
-.footer-column ul li a {
-    color: #d0d0d0;
-    font-size: 13px;
-}
-
-.footer-column ul{
-    list-style:none;
-}
-
-.footer-column ul li{
-    margin-bottom:6px;
-}
-
-.footer-column ul li a{
-    text-decoration:none;
-}
-
-.footer-column ul li a:hover{
-    color:#42c84d;
-}
-
-.footer hr{
-    border:none;
-    border-top:1px solid #2c3b48;
-    margin:20px 0 10px;
-}
-
-.footer-bottom{
-    display:flex;
-    justify-content:space-between;
-    flex-wrap:wrap;
-    gap:10px;
-    font-size:13px;
-  
-}
-</style>
 </head>
 
 <body>
 
-<!-- NAVBAR (FIXED) -->
-<nav class="nav">
-  <div class="nav-inner">
+<!-- ===========================
+        NAVBAR
+=========================== -->
 
-    <a href="Homepage.html" class="logo">
-      <i class="fa-solid fa-bag-shopping"></i>
-      Sasto<span>Bazaar</span>
-    </a>
+<nav class="navbar">
 
-    <div class="search-wrap">
-      <input type="text" placeholder="Search products...">
-      <button><i class="fa fa-search"></i></button>
+    <div class="logo">
+        <i class="fa-solid fa-bag-shopping"></i>
+        Sasto<span>Bazaar</span>
+    </div>
+
+    <div class="search-box">
+
+        <input
+        type="text"
+        placeholder="Search Products...">
+
+        <button>
+            <i class="fa-solid fa-search"></i>
+        </button>
+
     </div>
 
     <ul class="nav-links">
-      <li><a href="Homepage.html"><i class="fa fa-house"></i> Home</a></li>
-      <li><a href="aboutus.html"><i class="fa fa-circle-info"></i> About</a></li>
-      <li><a href="addtocart.html"><i class="fa fa-cart-shopping"></i> Cart</a></li>
-      <li><a href="login.html"><i class="fa fa-user"></i> Account</a></li>
+
+        <li>
+            <a href="./Homepage.html">
+                <i class="fa fa-home"></i>
+                Home
+            </a>
+        </li>
+
+        <li>
+            <a href="./aboutus.html">
+                <i class="fa fa-circle-info"></i>
+                About
+            </a>
+        </li>
+
+        <li>
+            <a href="./cart.html">
+                <i class="fa fa-cart-shopping"></i>
+                Cart
+            </a>
+        </li>
+
+        <li>
+            <a href="./login.html">
+                <i class="fa fa-user"></i>
+                Account
+            </a>
+        </li>
+
     </ul>
 
-  </div>
 </nav>
 
-<!-- HERO -->
+<!-- ===========================
+        HERO
+=========================== -->
+
 <section class="hero">
-    <img src="../static/image/explore the market.png">
+
+    <img
+    src="../static/image/explore the market.png"
+    alt="Explore Products">
+
 </section>
 
-<!-- MAIN -->
+<!-- ===========================
+        MAIN CONTENT
+=========================== -->
+
 <div class="container">
 
+    <!-- Sidebar -->
+
     <aside class="sidebar">
+
         <h3>Categories</h3>
-        <a href="expolrepage.html">All</a>
-        <a href="books.html">Books</a>
-        <a href="electronics.html">Electronics</a>
-        <a href="furniture.html">Furniture</a>
-        <a href="./sports.html">Sports & Fitness</a>
-        <a href="bags.html">Bags</a>
-        <a href="stationery.html">Stationery</a>
+
+        <a href="./explorepage.html" class="active">
+            All Products
+        </a>
+
+        <a href="./books.html">
+            Books
+        </a>
+
+        <a href="./electronics.html">
+            Electronics
+        </a>
+
+        <a href="./furniture.html">
+            Furniture
+        </a>
+
+        <a href="./sports.html">
+            Sports & Fitness
+        </a>
+
+        <a href="./bags.html">
+            Bags
+        </a>
+
+        <a href="./stationery.html">
+            Stationery
+        </a>
+
     </aside>
 
-    <section class="products">
+    <!-- Products -->
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794">
-            <div class="content">
-                <div class="category">Books</div>
-                <h3>Harry Potter</h3>
-                <p class="price">Rs 2,500</p>
-                <button>Add to Cart</button>
-            </div>
-        </div>
+    <main class="content">
 
-    </section>
+        <h2 class="title">
+            Explore All Products
+        </h2>
 
-    <section class="products">
+        <section class="products">
+            <!-- ===========================
+        PRODUCT 1
+=========================== -->
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794">
-            <div class="content">
-                <div class="category">Books</div>
-                <h3>Harry Potter</h3>
-                <p class="price">Rs 2,500</p>
-                <button>Add to Cart</button>
-            </div>
-        </div>
+<div class="product-card">
 
-    </section>
+    <span class="badge-new">NEW</span>
 
-    <section class="products">
+    <div class="card-img-holder">
+        <img src="../static/image/book1.jpg" alt="Harry Potter">
+    </div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794">
-            <div class="content">
-                <div class="category">Books</div>
-                <h3>Harry Potter</h3>
-                <p class="price">Rs 2,500</p>
-                <button>Add to Cart</button>
-            </div>
-        </div>
-
-    </section>
+    <div class="card-details">
+        <h4>Harry Potter and the Philosopher's Stone</h4>
+        <p class="price">Rs. 2,500</p>
+        <button class="cart-btn">Add to Cart</button>
+    </div>
 
 </div>
 
-<!-- FOOTER -->
+<!-- ===========================
+        PRODUCT 2
+=========================== -->
+
+<div class="product-card">
+
+    <div class="card-img-holder">
+        <img src="../static/image/book2.jpg" alt="Atomic Habits">
+    </div>
+
+    <div class="card-details">
+        <h4>Atomic Habits</h4>
+        <p class="price">Rs. 1,200</p>
+        <button class="cart-btn">Add to Cart</button>
+    </div>
+
+</div>
+
+<!-- ===========================
+        PRODUCT 3
+=========================== -->
+
+<div class="product-card">
+
+    <div class="card-img-holder">
+        <img src="../static/image/iphone.jpg" alt="iPhone 13">
+    </div>
+
+    <div class="card-details">
+        <h4>iPhone 13 (128GB)</h4>
+        <p class="price">Rs. 55,000</p>
+        <button class="cart-btn">Add to Cart</button>
+    </div>
+
+</div>
+
+<!-- ===========================
+        PRODUCT 4
+=========================== -->
+
+<div class="product-card">
+
+    <div class="card-img-holder">
+        <img src="../static/image/mouse.jpg" alt="Wireless Mouse">
+    </div>
+
+    <div class="card-details">
+        <h4>Wireless Mouse</h4>
+        <p class="price">Rs. 500</p>
+        <button class="cart-btn">Add to Cart</button>
+    </div>
+
+</div>
+
+<!-- ===========================
+        PRODUCT 5
+=========================== -->
+
+<div class="product-card">
+
+    <div class="card-img-holder">
+        <img src="../static/image/bag1.jpg" alt="School Backpack">
+    </div>
+
+    <div class="card-details">
+        <h4>School Backpack</h4>
+        <p class="price">Rs. 1,500</p>
+        <button class="cart-btn">Add to Cart</button>
+    </div>
+
+</div>
+
+<!-- ===========================
+        PRODUCT 6
+=========================== -->
+
+<div class="product-card">
+
+    <div class="card-img-holder">
+        <img src="../static/image/notebook.jpg" alt="Premium Notebook">
+    </div>
+
+    <div class="card-details">
+        <h4>Premium Notebook</h4>
+        <p class="price">Rs. 120</p>
+        <button class="cart-btn">Add to Cart</button>
+    </div>
+
+</div>
+<!-- ===========================
+        PRODUCT 7
+=========================== -->
+
+<div class="product-card">
+
+    <div class="card-img-holder">
+        <img src="../static/image/chair.jpg" alt="Office Chair">
+    </div>
+
+    <div class="card-details">
+        <h4>Office Chair</h4>
+        <p class="price">Rs. 4,500</p>
+        <button class="cart-btn">Add to Cart</button>
+    </div>
+
+</div>
+
+<!-- ===========================
+        PRODUCT 8
+=========================== -->
+
+<div class="product-card">
+
+    <div class="card-img-holder">
+        <img src="../static/image/table.jpg" alt="Study Table">
+    </div>
+
+    <div class="card-details">
+        <h4>Study Table</h4>
+        <p class="price">Rs. 8,000</p>
+        <button class="cart-btn">Add to Cart</button>
+    </div>
+
+</div>
+
+<!-- ===========================
+        PRODUCT 9
+=========================== -->
+
+<div class="product-card">
+
+    <div class="card-img-holder">
+        <img src="../static/image/dumbbell.jpg" alt="Dumbbell Set">
+    </div>
+
+    <div class="card-details">
+        <h4>10kg Dumbbell Set</h4>
+        <p class="price">Rs. 3,000</p>
+        <button class="cart-btn">Add to Cart</button>
+    </div>
+
+</div>
+
+<!-- ===========================
+        PRODUCT 10
+=========================== -->
+
+<div class="product-card">
+
+    <div class="card-img-holder">
+        <img src="../static/image/racket.jpg" alt="Badminton Racket">
+    </div>
+
+    <div class="card-details">
+        <h4>Badminton Racket</h4>
+        <p class="price">Rs. 1,200</p>
+        <button class="cart-btn">Add to Cart</button>
+    </div>
+
+</div>
+
+<!-- ===========================
+        PRODUCT 11
+=========================== -->
+
+<div class="product-card">
+
+    <div class="card-img-holder">
+        <img src="../static/image/monitor.jpg" alt="Monitor">
+    </div>
+
+    <div class="card-details">
+        <h4>24-inch LED Monitor</h4>
+        <p class="price">Rs. 12,000</p>
+        <button class="cart-btn">Add to Cart</button>
+    </div>
+
+</div>
+
+<!-- ===========================
+        PRODUCT 12
+=========================== -->
+
+<div class="product-card">
+
+    <div class="card-img-holder">
+        <img src="../static/image/travel-bag.jpg" alt="Travel Backpack">
+    </div>
+
+    <div class="card-details">
+        <h4>Travel Backpack</h4>
+        <p class="price">Rs. 2,200</p>
+        <button class="cart-btn">Add to Cart</button>
+    </div>
+
+</div>
+<!-- ===========================
+        PRODUCT 13
+=========================== -->
+
+<div class="product-card hidden">
+
+    <div class="card-img-holder">
+        <img src="../static/image/book3.jpg" alt="Rich Dad Poor Dad">
+    </div>
+
+    <div class="card-details">
+        <h4>Rich Dad Poor Dad</h4>
+        <p class="price">Rs. 950</p>
+        <button class="cart-btn">Add to Cart</button>
+    </div>
+
+</div>
+
+<!-- PRODUCT 14 -->
+
+<div class="product-card hidden">
+
+    <div class="card-img-holder">
+        <img src="../static/image/headphones.jpg" alt="Headphones">
+    </div>
+
+    <div class="card-details">
+        <h4>Wireless Headphones</h4>
+        <p class="price">Rs. 2,500</p>
+        <button class="cart-btn">Add to Cart</button>
+    </div>
+
+</div>
+
+<!-- PRODUCT 15 -->
+
+<div class="product-card hidden">
+
+    <div class="card-img-holder">
+        <img src="../static/image/desk.jpg" alt="Computer Desk">
+    </div>
+
+    <div class="card-details">
+        <h4>Computer Desk</h4>
+        <p class="price">Rs. 7,500</p>
+        <button class="cart-btn">Add to Cart</button>
+    </div>
+
+</div>
+
+<!-- PRODUCT 16 -->
+
+<div class="product-card hidden">
+
+    <div class="card-img-holder">
+        <img src="../static/image/yoga-mat.jpg" alt="Yoga Mat">
+    </div>
+
+    <div class="card-details">
+        <h4>Yoga Mat</h4>
+        <p class="price">Rs. 950</p>
+        <button class="cart-btn">Add to Cart</button>
+    </div>
+
+</div>
+
+<!-- PRODUCT 17 -->
+
+<div class="product-card hidden">
+
+    <div class="card-img-holder">
+        <img src="../static/image/office-bag.jpg" alt="Office Bag">
+    </div>
+
+    <div class="card-details">
+        <h4>Office Laptop Bag</h4>
+        <p class="price">Rs. 1,800</p>
+        <button class="cart-btn">Add to Cart</button>
+    </div>
+
+</div>
+
+<!-- PRODUCT 18 -->
+
+<div class="product-card hidden">
+
+    <div class="card-img-holder">
+        <img src="../static/image/pen-set.jpg" alt="Pen Set">
+    </div>
+
+    <div class="card-details">
+        <h4>Color Pen Set</h4>
+        <p class="price">Rs. 250</p>
+        <button class="cart-btn">Add to Cart</button>
+    </div>
+
+</div>
+
+<!-- PRODUCT 19 -->
+
+<div class="product-card hidden">
+
+    <div class="card-img-holder">
+        <img src="../static/image/book4.jpg" alt="The Psychology of Money">
+    </div>
+
+    <div class="card-details">
+        <h4>The Psychology of Money</h4>
+        <p class="price">Rs. 1,350</p>
+        <button class="cart-btn">Add to Cart</button>
+    </div>
+
+</div>
+
+<!-- PRODUCT 20 -->
+
+<div class="product-card hidden">
+
+    <div class="card-img-holder">
+        <img src="../static/image/router.jpg" alt="Router">
+    </div>
+
+    <div class="card-details">
+        <h4>Wireless Router</h4>
+        <p class="price">Rs. 1,200</p>
+        <button class="cart-btn">Add to Cart</button>
+    </div>
+
+</div>
+
+<!-- PRODUCT 21 -->
+
+<div class="product-card hidden">
+
+    <div class="card-img-holder">
+        <img src="../static/image/bookshelf.jpg" alt="Bookshelf">
+    </div>
+
+    <div class="card-details">
+        <h4>Wooden Bookshelf</h4>
+        <p class="price">Rs. 5,000</p>
+        <button class="cart-btn">Add to Cart</button>
+    </div>
+
+</div>
+
+<!-- PRODUCT 22 -->
+
+<div class="product-card hidden">
+
+    <div class="card-img-holder">
+        <img src="../static/image/football.jpg" alt="Football">
+    </div>
+
+    <div class="card-details">
+        <h4>Football</h4>
+        <p class="price">Rs. 900</p>
+        <button class="cart-btn">Add to Cart</button>
+    </div>
+
+</div>
+
+<!-- PRODUCT 23 -->
+
+<div class="product-card hidden">
+
+    <div class="card-img-holder">
+        <img src="../static/image/duffle-bag.jpg" alt="Duffle Bag">
+    </div>
+
+    <div class="card-details">
+        <h4>Duffle Bag</h4>
+        <p class="price">Rs. 1,600</p>
+        <button class="cart-btn">Add to Cart</button>
+    </div>
+
+</div>
+
+<!-- PRODUCT 24 -->
+
+<div class="product-card hidden">
+
+    <div class="card-img-holder">
+        <img src="../static/image/geometry-box.jpg" alt="Geometry Box">
+    </div>
+
+    <div class="card-details">
+        <h4>Geometry Box</h4>
+        <p class="price">Rs. 200</p>
+        <button class="cart-btn">Add to Cart</button>
+    </div>
+
+</div>
+
+</section>
+
+<div class="load-more">
+    <button id="loadBtn">
+        Load More Products
+    </button>
+</div>
+
+</main>
+
+</div>
+<!-- ===========================
+        FOOTER
+=========================== -->
+
 <footer class="footer">
 
-  <div class="footer-container">
+    <div class="footer-container">
 
-    <div class="footer-column">
-      <h2><span>Sasto</span> Bazaar</h2>
-      <p>Your Unused Items, Someone Else's Treasure.</p>
-      <p>Sasto Bazzar is a platform to buy and sell second-hand items easily and safely.</p>
+        <!-- Company -->
+
+        <div class="footer-column">
+
+            <h2>
+                <span>Sasto</span> Bazaar
+            </h2>
+
+            <p>
+                Your Unused Items, Someone Else's Treasure.
+            </p>
+
+            <p>
+                SastoBazaar is a platform to buy and sell second-hand items
+                easily and safely.
+            </p>
+
+        </div>
+
+        <!-- Quick Links -->
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li><a href="./Homepage.html">Home</a></li>
+                <li><a href="./explorepage.html">Browse Items</a></li>
+                <li><a href="./aboutus.html">About Us</a></li>
+                <li><a href="./login.html">Login / Sign Up</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Categories -->
+
+        <div class="footer-column">
+
+            <h3>Categories</h3>
+
+            <ul>
+
+                <li><a href="./books.html">Books</a></li>
+                <li><a href="./electronics.html">Electronics</a></li>
+                <li><a href="./furniture.html">Furniture</a></li>
+                <li><a href="./sports.html">Sports & Fitness</a></li>
+                <li><a href="./bags.html">Bags</a></li>
+                <li><a href="./stationery.html">Stationery</a></li>
+
+            </ul>
+
+        </div>
+
     </div>
 
-    <div class="footer-column">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="Homepage.html">Home</a></li>
-        <li><a href="expolrepage.html">Browse Items</a></li>
-        <li><a href="aboutus.html">About us</a></li>
-        <li><a href="login.html">Login / Sign up</a></li>
-      </ul>
+    <hr>
+
+    <div class="footer-bottom">
+
+        <p>📍 Kathmandu, Nepal</p>
+
+        <p>© 2026 SastoBazaar. All rights reserved.</p>
+
+        <div class="footer-links">
+
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Help Center</a>
+
+        </div>
+
     </div>
-
-    <div class="footer-column">
-      <h3>Categories</h3>
-      <ul>
-        <li><a href="electronics.html">Electronics</a></li>
-        <li><a href="furniture.html">Furniture</a></li>
-        <li><a href="stationery.html">Stationery</a></li>
-        <li><a href="books.html">Books</a></li>
-        <li><a href="bags.html">Bags</a></li>
-        <li><a href="sports.html">Sports & Fitness</a></li>
-      </ul>
-    </div>
-
-  </div>
-
-  <hr>
-
-  <div class="footer-bottom">
-    <p>📍 Kathmandu, Nepal</p>
-    <p>© 2024 SastoBazaar. All rights reserved.</p>
-
-    <div class="footer-links">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms & Conditions</a>
-      <a href="#">Help Center</a>
-    </div>
-  </div>
 
 </footer>
+
+<!-- ===========================
+        LOAD MORE SCRIPT
+=========================== -->
+
+<script>
+
+const loadBtn = document.getElementById("loadBtn");
+
+if (loadBtn) {
+
+    loadBtn.addEventListener("click", function () {
+
+        const hiddenProducts = document.querySelectorAll(".product-card.hidden");
+
+        hiddenProducts.forEach(function(product) {
+            product.classList.remove("hidden");
+        });
+
+        loadBtn.style.display = "none";
+
+    });
+
+}
+
+</script>
 
 </body>
 </html>

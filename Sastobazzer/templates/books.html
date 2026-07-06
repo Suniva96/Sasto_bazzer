@@ -1,214 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Books - SastoBazaar</title>
 
-<!-- External Icon and Styling Links -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="../static/css/home.css">
-<!-- Optional: Add a specific CSS file if you want to isolate book grid styling -->
-<link rel="stylesheet" href="../static/css/books.css"> 
+<title>Books | SastoBazaar</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- Category CSS -->
+<link rel="stylesheet" href="../static/css/category.css">
+
 </head>
 
 <body>
 
-<!-- NAVBAR (Identical to Homepage) -->
-<nav>
-  <div class="nav-inner">
+<!-- ===========================
+        NAVBAR
+=========================== -->
 
-    <!-- Logo -->
-    <a href="Homepage.html" class="logo">
-      <i class="fa-solid fa-bag-shopping"></i>
-      Sasto<span>Bazaar</span>
-    </a>
+<nav class="navbar">
 
-    <!-- Search Bar -->
-    <div class="search-wrap">
-      <input type="text" placeholder="Search books...">
-      <button>
-        <i class="fa fa-search"></i>
-      </button>
-    </div>
+<div class="logo">
+    <i class="fa-solid fa-bag-shopping"></i>
+    Sasto<span>Bazaar</span>
+</div>
 
-    <!-- Links -->
-    <ul class="nav-links">
-     <li><a href="electronics.html"><i class="fa-solid fa-laptop"></i> Electronics</a></li>
-     <li><a href="stationery.html"><i class="fa-solid fa-pen-ruler"></i> Stationery</a></li>
-     <li><a href="books.html" class="active"><i class="fa-solid fa-book"></i> Books</a></li>
-     <li><a href="furniture.html"><i class="fa-solid fa-couch"></i> Furniture</a></li>
-    <li><a href="sports.html"><i class="fa-solid fa-dumbbell"></i> Sports</a></li>
-    <li><a href="bags.html"><i class="fa-solid fa-bag-shopping"></i> Bags</a></li> 
-    </ul>
+<div class="search-box">
 
-  </div>
+    <input type="text" placeholder="Search Books...">
+
+    <button>
+        <i class="fa-solid fa-search"></i>
+    </button>
+
+</div>
+
+<ul class="nav-links">
+
+    <li><a href="./Homepage.html"><i class="fa fa-home"></i> Home</a></li>
+    <li><a href="./aboutus.html"><i class="fa fa-circle-info"></i> About</a></li>
+    <li><a href="./cart.html"><i class="fa fa-cart-shopping"></i> Cart</a></li>
+    <li><a href="./login.html"><i class="fa fa-user"></i> Account</a></li>
+
+</ul>
+
 </nav>
 
-<!-- CATEGORY NAV BAR -->
-<div class="category-navbar">
-    <div class="cat-nav-links">
+<!-- ===========================
+        HERO
+=========================== -->
 
-        <a href="electronics.html">
-            <i class="fa-solid fa-laptop"></i> Electronics
-        </a>
+<section class="hero">
 
-        <a href="stationery.html">
-            <i class="fa-solid fa-pen-ruler"></i> Stationery
-        </a>
+<img src="../static/image/explore the market.png" alt="Books">
 
-        <a href="books.html" class="active">
-            <i class="fa-solid fa-book"></i> Books
-        </a>
+</section>
 
-        <a href="furniture.html">
-            <i class="fa-solid fa-couch"></i> Furniture
-        </a>
+<!-- ===========================
+        MAIN CONTENT
+=========================== -->
 
-        <a href="sports.html">
-            <i class="fa-solid fa-dumbbell"></i> Sports
-        </a>
+<div class="container">
 
-        <a href="bags.html">
-            <i class="fa-solid fa-bag-shopping"></i> Bags
-        </a>
+<!-- Sidebar -->
 
+<aside class="sidebar">
+
+    <h3>Categories</h3>
+
+     <a href="./expolrepage.html">All product </a>
+    <a href="./electronics.html">Electronics</a>
+    <a href="./stationery.html">Stationery</a>
+    <a href="./books.html" class="active">Books</a>
+    <a href="./furniture.html">Furniture</a>
+    <a href="./sports.html">Sports & Fitness</a>
+    <a href="./bags.html">Bags</a>
+
+</aside>
+
+<!-- Products -->
+
+<main class="content">
+
+    <h2 class="title">Books Collection</h2>
+
+    <section class="products">
+
+        <!-- PRODUCT 1 -->
+        <div class="product-card">
+            <span class="badge-new">NEW</span>
+
+            <div class="card-img-holder">
+                <img src="../static/image/engineering book.jpg" alt="">
+            </div>
+
+            <div class="card-details">
+                <h4>Engineering Mathematics</h4>
+                <p class="price">Rs. 600</p>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- PRODUCT 2 -->
+        <div class="product-card">
+            <div class="card-img-holder">
+                <img src="../static/image/book2.jpg" alt="">
+            </div>
+
+            <div class="card-details">
+                <h4>The Alchemist</h4>
+                <p class="price">Rs. 300</p>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- PRODUCT 3 -->
+        <div class="product-card">
+            <div class="card-img-holder">
+                <img src="../static/image/book3.jpg" alt="">
+            </div>
+
+            <div class="card-details">
+                <h4>MBBS Entrance Guide</h4>
+                <p class="price">Rs. 1500</p>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- PRODUCT 4 -->
+        <div class="product-card">
+            <div class="card-img-holder">
+                <img src="../static/image/book4.jpg" alt="">
+            </div>
+
+            <div class="card-details">
+                <h4>SEE Question Bank</h4>
+                <p class="price">Rs. 250</p>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- PRODUCT 5 -->
+        <div class="product-card">
+            <div class="card-img-holder">
+                <img src="../static/image/book5.jpg" alt="">
+            </div>
+
+            <div class="card-details">
+                <h4>Principles of Management</h4>
+                <p class="price">Rs. 450</p>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- PRODUCT 6 -->
+        <div class="product-card">
+            <div class="card-img-holder">
+                <img src="../static/image/book6.jpg" alt="">
+            </div>
+
+            <div class="card-details">
+                <h4>Atomic Habits</h4>
+                <p class="price">Rs. 350</p>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- HIDDEN PRODUCTS -->
+        <div class="product-card hidden">
+            <div class="card-img-holder">
+                <img src="../static/image/book7.jpg" alt="">
+            </div>
+
+            <div class="card-details">
+                <h4>Muna Madan</h4>
+                <p class="price">Rs. 150</p>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card hidden">
+            <div class="card-img-holder">
+                <img src="../static/image/book8.jpg" alt="">
+            </div>
+
+            <div class="card-details">
+                <h4>Python Programming</h4>
+                <p class="price">Rs. 700</p>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- LOAD MORE -->
+    <div class="load-more">
+        <button id="loadBtn">Load More Books</button>
     </div>
+
+</main>
+
 </div>
 
-<!-- HERO -->
-<div class="category-hero">
+<!-- ===========================
+        FOOTER
+=========================== -->
 
-    <img src="../static/image/book-banner.jpeg" alt="Books Banner">
-
-    <div class="hero-text">
-        <h1>Pre-loved Books Marketplace</h1>
-        <p>Expand your mind, not your budget. Explore used books across Nepal.</p>
-    </div>
-
-</div>
-
-<!-- BOOK SECTION -->
-<div class="content-section">
-
-    <h2 class="section-title">Available Books</h2>
-
-    <div class="deal">
-
-    <!-- Book 1 -->
-    <div class="card">
-      <span class="badge-new">Newly Added</span>
-      <img src="../static/image/engineering book.jpg" alt="Engineering Mathematics">
-      <h4>Engineering Mathematics</h4>
-      <p>Rs. 600</p>
-    </div>
-
-    <!-- Book 2 -->
-    <div class="card">
-      <img src="../static/image/book2.jpg" alt="Fiction Novel">
-      <h4>The Alchemist (Paperback)</h4>
-      <p>Rs. 300</p>
-    </div>
-
-    <!-- Book 3 -->
-    <div class="card">
-      <img src="../static/image/book3.jpg" alt="Medical Textbook">
-      <h4>MBBS Entrance Guide</h4>
-      <p>Rs. 1,500</p>
-    </div>
-
-    <!-- Book 4 -->
-    <div class="card">
-      <img src="../static/image/book4.jpg" alt="SEE Prep Book">
-      <h4>SEE Question Bank</h4>
-      <p>Rs. 250</p>
-    </div>
-
-    <!-- Book 5 -->
-    <div class="card">
-      <img src="../static/image/book5.jpg" alt="Management Book">
-      <h4>Principles of Management</h4>
-      <p>Rs. 450</p>
-    </div>
-
-    <!-- Book 6 -->
-    <div class="card">
-      <img src="../static/image/book6.jpg" alt="Self Help Book">
-      <h4>Atomic Habits</h4>
-      <p>Rs. 350</p>
-    </div>
-
-    <!-- Book 7 -->
-    <div class="card">
-      <img src="../static/image/book7.jpg" alt="Literature Book">
-      <h4>Muna Madan</h4>
-      <p>Rs. 150</p>
-    </div>
-
-    <!-- Book 8 -->
-    <div class="card">
-      <img src="../static/image/book8.jpg" alt="Coding Book">
-      <h4>Python Programming</h4>
-      <p>Rs. 700</p>
-    </div>
-
-  </div>
-
-  <div class="explore-btn">
-    <button>Load More Books</button>
-  </div>
-
-</div>
-
-<!-- FOOTER (Identical to Homepage) -->
 <footer class="footer">
 
-  <div class="footer-container">
+<!-- same footer as your sports page -->
+
+<div class="footer-container">
 
     <div class="footer-column">
-      <h2><span>Sasto</span> Bazaar</h2>
-      <p>Your Unused Items, Someone Else's Treasure.</p>
-      <p>Hamro Deal is a platform to buy and sell second-hand items easily and safely.</p>
+        <h2><span>Sasto</span> Bazaar</h2>
+        <p>Your Unused Items, Someone Else's Treasure.</p>
     </div>
 
     <div class="footer-column">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="Homepage.html">Home</a></li>
-        <li><a href="#">Browse Items</a></li>
-        <li><a href="#">Categories</a></li>
-        <li><a href="aboutus.html">About us</a></li>
-        <li><a href="#">Login / Sign up</a></li>
-      </ul>
+        <h3>Quick Links</h3>
+        <ul>
+            <li><a href="./Homepage.html">Home</a></li>
+            <li><a href="./aboutus.html">About Us</a></li>
+            <li><a href="./login.html">Login</a></li>
+        </ul>
     </div>
 
     <div class="footer-column">
-      <h3>Categories</h3>
-      <ul>
-        <li><a href="electronics.html">Electronics</a></li>
-        <li><a href="furniture.html">Furniture</a></li>
-        <li><a href="stationery.html">Stationery</a></li>
-        <li><a href="books.html">Books</a></li>
-        <li><a href="bags.html">Bags</a></li>
-      </ul>
+        <h3>Categories</h3>
+        <ul>
+            <li><a href="./books.html">Books</a></li>
+            <li><a href="./electronics.html">Electronics</a></li>
+            <li><a href="./sports.html">Sports</a></li>
+        </ul>
     </div>
 
-  </div>
+</div>
 
-  <hr>
+<hr>
 
-  <div class="footer-bottom">
+<div class="footer-bottom">
+
     <p>📍 Kathmandu, Nepal</p>
-    <p>© 2024 SastoBazaar. All rights reserved.</p>
+    <p>© 2026 SastoBazaar</p>
 
-    <div class="footer-links">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms & Conditions</a>
-      <a href="#">Help Center</a>
-    </div>
-  </div>
+</div>
 
 </footer>
+<script>
+
+const loadBtn = document.getElementById("loadBtn");
+
+if (loadBtn) {
+
+    loadBtn.addEventListener("click", function () {
+
+        const hiddenProducts = document.querySelectorAll(".product-card.hidden");
+
+        hiddenProducts.forEach(function (product) {
+            product.classList.remove("hidden");
+        });
+
+        loadBtn.style.display = "none";
+
+    });
+
+}
+
+</script>
+
 
 </body>
 </html>

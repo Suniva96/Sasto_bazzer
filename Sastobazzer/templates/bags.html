@@ -1,211 +1,534 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bags & Backpacks - SastoBazaar</title>
 
-<!-- SYSTEM GLOBAL WORKING CDN ADDRESS FOR FONT AWESOME ICONS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<!-- Linking the newly created structural category layout stylesheet below -->
-<link rel="stylesheet" href="../static/css/bags.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bags | SastoBazaar</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Category CSS -->
+    <link rel="stylesheet" href="../static/css/category.css">
+
 </head>
+
 <body>
-  
-  <!-- NAVBAR MODULE (UNIFIED GREEN BRAND LAYOUT CONFIGURATION) -->
-  <nav>
-    <div class="nav-inner">
-      <!-- Logo Component -->
-      <a href="Homepage.html" class="logo">
-        <i class="fa-solid fa-bag-shopping"></i> Sasto<span>Bazaar</span>
-      </a>
 
-      <!-- Central Search Box Component Wrapper Layout -->
-      <div class="search-wrap">
-        <input type="text" placeholder="Search backpacks, travel bags, wallets...">
-        <button type="submit" aria-label="Run bags inventory query search">
-          <i class="fa fa-search"></i>
+<!-- ===========================
+        NAVBAR
+=========================== -->
+
+<nav class="navbar">
+
+    <div class="logo">
+
+        <i class="fa-solid fa-bag-shopping"></i>
+
+        Sasto<span>Bazaar</span>
+
+    </div>
+
+    <div class="search-box">
+
+        <input
+        type="text"
+        placeholder="Search Bags...">
+
+        <button>
+
+            <i class="fa-solid fa-search"></i>
+
         </button>
-      </div>
 
-      <!-- Navigation Link Options Deck -->
-      <ul class="nav-links">
-        <li><a href="electronics.html"><i class="fa-solid fa-laptop"></i> Electronics</a></li>
-        <li><a href="stationery.html"><i class="fa-solid fa-pen-ruler"></i> Stationery</a></li>
-        <li><a href="books.html"><i class="fa-solid fa-book"></i> Books</a></li>
-        <li><a href="furniture.html"><i class="fa-solid fa-couch"></i> Furniture</a></li>
-        <li><a href="sports.html"><i class="fa-solid fa-dumbbell"></i> Sports</a></li>
-        <li><a href="bags.html" class="active"><i class="fa-solid fa-bag-shopping"></i> Bags</a></li>
-      </ul>
-    </div>
-  </nav>
-  
-  <!-- BAGS COMPACT LANDSCAPE BANNER DISPLAY -->
-  <div class="category-hero bags-bg">
-    <img src="../static/image/bags-banner.jpeg" alt="SastoBazaar Stylish Second Hand Travel Backpacks Handbags Banner Background">
-    <div class="hero-text">
-      <h1>Pre-loved Bags & Backpacks</h1>
-      <p>Durable travel rucksacks, sleek school backpacks, and premium lifestyle handbags ready for a second journey.</p>
-    </div>
-  </div>
-
-  <!-- CONTAINER MAIN AREA GRID LIST FOR PRODUCT CARDS -->
-  <main class="content-section">
-    <div class="section-title">Available Bags</div>
-
-    <div class="category-grid">
-      <!-- Item 1 -->
-      <article class="product-card">
-        <span class="badge-new">Newly Added</span>
-        <div class="card-img-holder">
-          <img src="../static/image/backpack-1.jpg" alt="Water Resistant Anti Theft Smart Laptop Backpack With USB Charging Port">
-        </div>
-        <div class="card-details">
-          <h4>Anti-Theft 15.6" Laptop Backpack</h4>
-          <p class="price">Rs. 1,850</p>
-        </div>
-      </article>
-
-      <!-- Item 2 -->
-      <article class="product-card">
-        <div class="card-img-holder">
-          <img src="../static/image/travel-duffel.jpg" alt="Large Capacity Heavy Duty Waterproof Travel Luggage Duffel Bag">
-        </div>
-        <div class="card-details">
-          <h4>Waterproof Sports Travel Duffel Bag</h4>
-          <p class="price">Rs. 2,200</p>
-        </div>
-      </article>
-
-      <!-- Item 3 -->
-      <article class="product-card">
-        <div class="card-img-holder">
-          <img src="../static/image/leather-handbag.jpg" alt="Classic Premium Soft Textured Leather Tote Handbag For Women">
-        </div>
-        <div class="card-details">
-          <h4>Classic Leather Women's Tote Bag</h4>
-          <p class="price">Rs. 3,500</p>
-        </div>
-      </article>
-
-      <!-- Item 4 -->
-      <article class="product-card">
-        <div class="card-img-holder">
-          <img src="../static/image/hiking-rucksack.jpg" alt="Heavy Duty Large Volume Tactical Outdoor Hiking Mountain Camping Rucksack Bag">
-        </div>
-        <div class="card-details">
-          <h4>65L Outdoor Hiking Mountain Rucksack</h4>
-          <p class="price">Rs. 4,800</p>
-        </div>
-      </article>
-
-      <!-- Item 5 -->
-      <article class="product-card">
-        <div class="card-img-holder">
-          <img src="../static/image/school-bag.jpg" alt="Ergonomic Lightweight High Capacity School Students Kids Book Bag Backpack">
-        </div>
-        <div class="card-details">
-          <h4>Ergonomic High School Student Backpack</h4>
-          <p class="price">Rs. 1,250</p>
-        </div>
-      </article>
-
-      <!-- Item 6 -->
-      <article class="product-card">
-        <div class="card-img-holder">
-          <img src="../static/image/crossbody-messenger.jpg" alt="Vintage Waxed Canvas Real Leather Trim Laptop Messenger Crossbody Shoulder Bag">
-        </div>
-        <div class="card-details">
-          <h4>Canvas Crossbody Laptop Messenger Bag</h4>
-          <p class="price">Rs. 1,900</p>
-        </div>
-      </article>
-
-      <!-- HIDDEN REVEALABLE TILES -->
-      <article class="product-card hidden">
-        <div class="card-img-holder">
-          <img src="../static/image/leather-wallet.jpg" alt="Genuine Cowhide Leather Bi Fold Classic Slim Wallet Organizer for Men">
-        </div>
-        <div class="card-details">
-          <h4>Genuine Leather Bifold Slim Wallet</h4>
-          <p class="price">Rs. 850</p>
-        </div>
-      </article>
-
-      <article class="product-card hidden">
-        <div class="card-img-holder">
-          <img src="../static/image/waist-pouch.jpg" alt="Adjustable Strap Waterproof Utility Running Cycling Travel Fanny Pack Waist Bag Pouch">
-        </div>
-        <div class="card-details">
-          <h4>Waterproof Outdoor Sports Waist Pouch</h4>
-          <p class="price">Rs. 600</p>
-        </div>
-      </article>
     </div>
 
-    <!-- Exploration Interactive Trigger Action Row -->
-    <div class="explore-btn-row">
-      <button id="load-more-bags-trigger">Load More Bags</button>
-    </div>
-  </main>
+    <ul class="nav-links">
 
-  <!-- PLATFORM GLOBAL INTEGRATED FOOTER COMPONENT MODULAR BLOCK VIEW -->
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-column">
-        <h2><span>Sasto</span> Bazaar</h2>
-        <p>Your Unused Items, Someone Else's Treasure.</p>
-        <p>Hamro Deal is a platform to buy and sell second-hand items easily and safely.</p>
-      </div>
+        <li>
 
-      <div class="footer-column">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="Homepage.html">Home</a></li>
-          <li><a href="#">Browse Items</a></li>
-          <li><a href="#">Categories</a></li>
-          <li><a href="#">About us</a></li>
-          <li><a href="#">Login / Sign up</a></li>
-        </ul>
-      </div>
+            <a href="./Homepage.html">
 
-      <div class="footer-column">
+                <i class="fa fa-home"></i>
+
+                Home
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="./aboutus.html">
+
+                <i class="fa fa-circle-info"></i>
+
+                About
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="./addtocart.html">
+
+                <i class="fa fa-cart-shopping"></i>
+
+                Cart
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="./login.html">
+
+                <i class="fa fa-user"></i>
+
+                Account
+
+            </a>
+
+        </li>
+
+    </ul>
+
+</nav>
+
+<!-- ===========================
+        HERO
+=========================== -->
+
+<section class="hero">
+
+    <img
+    src="../static/image/explore the market.png"
+    alt="Bags">
+
+</section>
+
+<!-- ===========================
+        MAIN
+=========================== -->
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
         <h3>Categories</h3>
-        <ul>
-          <li><a href="electronics.html">Electronics</a></li>
-          <li><a href="#">Furniture</a></li>
-          <li><a href="stationery.html">Stationery</a></li>
-          <li><a href="books.html">Books</a></li>
-          <li><a href="bags.html">Bags</a></li>
-        </ul>
-      </div>
-    </div>
-    <hr class="footer-divider">
-    <div class="footer-bottom">
-      <p>📍 Kathmandu, Nepal</p>
-      <p>© 2024 SastoBazaar. All rights reserved.</p>
-      <div class="footer-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms & Conditions</a>
-        <a href="#">Help Center</a>
-      </div>
-    </div>
-  </footer>
 
-  <!-- ACTION LOGIC DEPLOYMENT CONTROLLER RUNTIME -->
-  <script>
-    document.getElementById('load-more-bags-trigger').addEventListener('click', function() {
-      const hiddenBagsCards = document.querySelectorAll('.category-grid .product-card.hidden');
-      const processThresholdCountLimit = 2;
-      
-      for (let i = 0; i < processThresholdCountLimit && i < hiddenBagsCards.length; i++) {
-        hiddenBagsCards[i].classList.remove('hidden');
-      }
-      
-      if (document.querySelectorAll('.category-grid .product-card.hidden').length === 0) {
-        this.style.display = 'none';
-      }
+        <a href="./explorepage.html">
+            All Products
+        </a>
+
+        <a href="./books.html">
+            Books
+        </a>
+
+        <a href="./electronics.html">
+            Electronics
+        </a>
+
+        <a href="./furniture.html">
+            Furniture
+        </a>
+
+        <a href="./sports.html">
+            Sports & Fitness
+        </a>
+
+        <a href="./bags.html" class="active">
+            Bags
+        </a>
+
+        <a href="./stationery.html">
+            Stationery
+        </a>
+
+    </aside>
+
+    <!-- Products -->
+
+    <main class="content">
+
+        <h2 class="title">
+            Bags Collection
+        </h2>
+
+        <section class="products">
+
+            <!-- Product 1 -->
+
+            <article class="product-card">
+
+                <span class="badge-new">
+                    Newly Added
+                </span>
+
+                <div class="card-img-holder">
+
+                    <img src="../static/image/backpack-1.jpg"
+                    alt="Laptop Backpack">
+
+                </div>
+
+                <div class="card-details">
+
+                    <h4>15.6" Laptop Backpack</h4>
+
+                    <p class="price">
+                        Rs. 1,850
+                    </p>
+
+                    <button class="cart-btn">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </article>
+
+            <!-- Product 2 -->
+
+            <article class="product-card">
+
+                <div class="card-img-holder">
+
+                    <img src="../static/image/travel-duffel.jpg"
+                    alt="Travel Duffel Bag">
+
+                </div>
+
+                <div class="card-details">
+
+                    <h4>Travel Duffel Bag</h4>
+
+                    <p class="price">
+                        Rs. 2,200
+                    </p>
+
+                    <button class="cart-btn">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </article>
+
+            <!-- Product 3 -->
+
+            <article class="product-card">
+
+                <div class="card-img-holder">
+
+                    <img src="../static/image/leather-handbag.jpg"
+                    alt="Leather Handbag">
+
+                </div>
+
+                <div class="card-details">
+
+                    <h4>Leather Women's Handbag</h4>
+
+                    <p class="price">
+                        Rs. 3,500
+                    </p>
+
+                    <button class="cart-btn">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </article>
+                        <!-- Product 4 -->
+
+            <article class="product-card">
+
+                <div class="card-img-holder">
+
+                    <img src="../static/image/hiking-rucksack.jpg"
+                    alt="Hiking Rucksack">
+
+                </div>
+
+                <div class="card-details">
+
+                    <h4>65L Hiking Rucksack</h4>
+
+                    <p class="price">
+                        Rs. 4,800
+                    </p>
+
+                    <button class="cart-btn">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </article>
+
+            <!-- Product 5 -->
+
+            <article class="product-card">
+
+                <div class="card-img-holder">
+
+                    <img src="../static/image/school-bag.jpg"
+                    alt="School Backpack">
+
+                </div>
+
+                <div class="card-details">
+
+                    <h4>School Backpack</h4>
+
+                    <p class="price">
+                        Rs. 1,250
+                    </p>
+
+                    <button class="cart-btn">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </article>
+
+            <!-- Product 6 -->
+
+            <article class="product-card">
+
+                <div class="card-img-holder">
+
+                    <img src="../static/image/crossbody-messenger.jpg"
+                    alt="Messenger Bag">
+
+                </div>
+
+                <div class="card-details">
+
+                    <h4>Canvas Messenger Bag</h4>
+
+                    <p class="price">
+                        Rs. 1,900
+                    </p>
+
+                    <button class="cart-btn">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </article>
+                        <!-- Product 7 (Hidden) -->
+
+            <article class="product-card hidden">
+
+                <div class="card-img-holder">
+
+                    <img src="../static/image/leather-wallet.jpg"
+                    alt="Leather Wallet">
+
+                </div>
+
+                <div class="card-details">
+
+                    <h4>Genuine Leather Wallet</h4>
+
+                    <p class="price">
+                        Rs. 850
+                    </p>
+
+                    <button class="cart-btn">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </article>
+
+            <!-- Product 8 (Hidden) -->
+
+            <article class="product-card hidden">
+
+                <div class="card-img-holder">
+
+                    <img src="../static/image/waist-pouch.jpg"
+                    alt="Waist Pouch">
+
+                </div>
+
+                <div class="card-details">
+
+                    <h4>Waterproof Waist Pouch</h4>
+
+                    <p class="price">
+                        Rs. 600
+                    </p>
+
+                    <button class="cart-btn">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </article>
+
+            <!-- Product 9 (Hidden) -->
+
+            <article class="product-card hidden">
+
+                <div class="card-img-holder">
+
+                    <img src="../static/image/travel-suitcase.jpg"
+                    alt="Travel Suitcase">
+
+                </div>
+
+                <div class="card-details">
+
+                    <h4>Travel Suitcase (24")</h4>
+
+                    <p class="price">
+                        Rs. 4,200
+                    </p>
+
+                    <button class="cart-btn">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </article>
+
+        </section>
+
+        <!-- Load More -->
+
+        <div class="load-more">
+
+            <button id="loadBtn">
+                Load More Bags
+            </button>
+
+        </div>
+
+    </main>
+
+</div>
+<!-- ===========================
+        FOOTER
+=========================== -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-column">
+
+            <h2>
+                <span>Sasto</span> Bazaar
+            </h2>
+
+            <p>
+                Your Unused Items, Someone Else's Treasure.
+            </p>
+
+            <p>
+                SastoBazaar is a platform to buy and sell second-hand items
+                easily and safely.
+            </p>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li><a href="./Homepage.html">Home</a></li>
+                <li><a href="./explorepage.html">Browse Items</a></li>
+                <li><a href="./aboutus.html">About Us</a></li>
+                <li><a href="./login.html">Login / Sign Up</a></li>
+
+            </ul>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>Categories</h3>
+
+            <ul>
+
+                <li><a href="./books.html">Books</a></li>
+                <li><a href="./electronics.html">Electronics</a></li>
+                <li><a href="./furniture.html">Furniture</a></li>
+                <li><a href="./sports.html">Sports & Fitness</a></li>
+                <li><a href="./bags.html">Bags</a></li>
+                <li><a href="./stationery.html">Stationery</a></li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="footer-bottom">
+
+        <p>📍 Kathmandu, Nepal</p>
+
+        <p>© 2026 SastoBazaar. All rights reserved.</p>
+
+        <div class="footer-links">
+
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Help Center</a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- ===========================
+        LOAD MORE SCRIPT
+=========================== -->
+
+<script>
+
+const loadBtn = document.getElementById("loadBtn");
+
+if (loadBtn) {
+
+    loadBtn.addEventListener("click", function () {
+
+        document.querySelectorAll(".product-card.hidden").forEach(function (card) {
+
+            card.classList.remove("hidden");
+
+        });
+
+        loadBtn.style.display = "none";
+
     });
-  </script>
+
+}
+
+</script>
+
 </body>
 </html>

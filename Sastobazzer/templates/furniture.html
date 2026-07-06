@@ -1,191 +1,534 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Furniture - SastoBazaar</title>
 
-<!-- External Icon and Styling Links -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="../static/css/home.css">
-<link rel="stylesheet" href="../static/css/furniture.css"> 
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Furniture | SastoBazaar</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Category CSS -->
+    <link rel="stylesheet" href="../static/css/category.css">
+
 </head>
 
 <body>
 
-<!-- NAVBAR (Direct Categories Layout) -->
-<nav>
-  <div class="nav-inner">
+<!-- ===========================
+        NAVBAR
+=========================== -->
 
-    <!-- Logo -->
-    <a href="Homepage.html" class="logo">
-      <i class="fa-solid fa-bag-shopping"></i>
-      Sasto<span>Bazaar</span>
-    </a>
+<nav class="navbar">
 
-    <!-- Search Bar -->
-    <div class="search-wrap">
-      <input type="text" placeholder="Search furniture...">
-      <button>
-        <i class="fa fa-search"></i>
-      </button>
+    <div class="logo">
+
+        <i class="fa-solid fa-bag-shopping"></i>
+
+        Sasto<span>Bazaar</span>
+
     </div>
 
-    <!-- Links (Direct Categories) -->
+    <div class="search-box">
+
+        <input
+        type="text"
+        placeholder="Search Furniture...">
+
+        <button>
+
+            <i class="fa-solid fa-search"></i>
+
+        </button>
+
+    </div>
+
     <ul class="nav-links">
-      <li><a href="electronics.html"><i class="fa-solid fa-laptop"></i> Electronics</a></li>
-      <li><a href="stationery.html"><i class="fa-solid fa-pen-ruler"></i> Stationery</a></li>
-      <li><a href="books.html"><i class="fa-solid fa-book"></i> Books</a></li>
-      <li><a href="furniture.html" class="active"><i class="fa-solid fa-couch"></i> Furniture</a></li>
-      <li><a href="sports.html"><i class="fa-solid fa-dumbbell"></i> Sports</a></li>
-      <li><a href="bags.html"><i class="fa-solid fa-bag-shopping"></i> Bags</a></li>
+
+        <li>
+
+            <a href="./Homepage.html">
+
+                <i class="fa fa-home"></i>
+
+                Home
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="./aboutus.html">
+
+                <i class="fa fa-circle-info"></i>
+
+                About
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="./addtocart.html">
+
+                <i class="fa fa-cart-shopping"></i>
+
+                Cart
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="./login.html">
+
+                <i class="fa fa-user"></i>
+
+                Account
+
+            </a>
+
+        </li>
+
     </ul>
 
-  </div>
 </nav>
 
-<!-- FURNITURE HEADER HERO BANNER -->
-<div class="furniture-hero">
-  <!-- Stock image placeholder for home furniture. Replace with your local banner path later -->
-  <img src="https://unsplash.com" alt="Furniture Banner">
-  
-  <div class="hero-text">
-    <h1>Quality Secon
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      ?d-Hand Furniture</h1>
-    <p>Upgrade your space comfortably. Discover affordable beds, desks, and sofas near you.</p>
-  </div>
+<!-- ===========================
+        HERO
+=========================== -->
+
+<section class="hero">
+
+    <img
+    src="../static/image/explore the market.png"
+    alt="Furniture">
+
+</section>
+
+<!-- ===========================
+        MAIN
+=========================== -->
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <h3>Categories</h3>
+
+        <a href="./explorepage.html">
+            All Products
+        </a>
+
+        <a href="./books.html">
+            Books
+        </a>
+
+        <a href="./electronics.html">
+            Electronics
+        </a>
+
+        <a href="./furniture.html" class="active">
+            Furniture
+        </a>
+
+        <a href="./sports.html">
+            Sports & Fitness
+        </a>
+
+        <a href="./bags.html">
+            Bags
+        </a>
+
+        <a href="./stationery.html">
+            Stationery
+        </a>
+
+    </aside>
+
+    <!-- Products -->
+
+    <main class="content">
+
+        <h2 class="title">
+            Furniture Collection
+        </h2>
+
+        <section class="products">
+
+            <!-- Product 1 -->
+
+            <article class="product-card">
+
+                <span class="badge-new">
+                    Newly Added
+                </span>
+
+                <div class="card-img-holder">
+
+                    <img src="../static/image/studychair.jpg"
+                    alt="Study Chair">
+
+                </div>
+
+                <div class="card-details">
+
+                    <h4>Ergonomic Study Chair</h4>
+
+                    <p class="price">
+                        Rs. 2,500
+                    </p>
+
+                    <button class="cart-btn">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </article>
+
+            <!-- Product 2 -->
+
+            <article class="product-card">
+
+                <div class="card-img-holder">
+
+                    <img src="../static/image/sofa.jpg"
+                    alt="Sofa">
+
+                </div>
+
+                <div class="card-details">
+
+                    <h4>3-Seater Sofa</h4>
+
+                    <p class="price">
+                        Rs. 18,500
+                    </p>
+
+                    <button class="cart-btn">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </article>
+
+            <!-- Product 3 -->
+
+            <article class="product-card">
+
+                <div class="card-img-holder">
+
+                    <img src="../static/image/table.jpg"
+                    alt="Wooden Table">
+
+                </div>
+
+                <div class="card-details">
+
+                    <h4>Wooden Study Table</h4>
+
+                    <p class="price">
+                        Rs. 4,000
+                    </p>
+
+                    <button class="cart-btn">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </article>
+                        <!-- Product 4 -->
+
+            <article class="product-card">
+
+                <div class="card-img-holder">
+
+                    <img src="../static/image/wardrobe.jpg"
+                    alt="Wardrobe">
+
+                </div>
+
+                <div class="card-details">
+
+                    <h4>2-Door Wooden Wardrobe</h4>
+
+                    <p class="price">
+                        Rs. 9,500
+                    </p>
+
+                    <button class="cart-btn">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </article>
+
+            <!-- Product 5 -->
+
+            <article class="product-card">
+
+                <div class="card-img-holder">
+
+                    <img src="../static/image/bed.jpg"
+                    alt="Single Bed">
+
+                </div>
+
+                <div class="card-details">
+
+                    <h4>Wooden Single Bed Frame</h4>
+
+                    <p class="price">
+                        Rs. 7,000
+                    </p>
+
+                    <button class="cart-btn">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </article>
+
+            <!-- Product 6 -->
+
+            <article class="product-card">
+
+                <div class="card-img-holder">
+
+                    <img src="../static/image/bookshelf.jpg"
+                    alt="Bookshelf">
+
+                </div>
+
+                <div class="card-details">
+
+                    <h4>4-Tier Wooden Bookshelf</h4>
+
+                    <p class="price">
+                        Rs. 3,200
+                    </p>
+
+                    <button class="cart-btn">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </article>
+                        <!-- Product 7 -->
+
+            <article class="product-card">
+
+                <div class="card-img-holder">
+
+                    <img src="../static/image/dining.jpg"
+                    alt="Dining Table">
+
+                </div>
+
+                <div class="card-details">
+
+                    <h4>Dining Table with 4 Chairs</h4>
+
+                    <p class="price">
+                        Rs. 12,000
+                    </p>
+
+                    <button class="cart-btn">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </article>
+
+            <!-- Product 8 (Hidden) -->
+
+            <article class="product-card hidden">
+
+                <div class="card-img-holder">
+
+                    <img src="../static/image/shoerack.jpg"
+                    alt="Shoe Rack">
+
+                </div>
+
+                <div class="card-details">
+
+                    <h4>Multi-layer Shoe Rack</h4>
+
+                    <p class="price">
+                        Rs. 850
+                    </p>
+
+                    <button class="cart-btn">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </article>
+
+            <!-- Product 9 (Hidden) -->
+
+            <article class="product-card hidden">
+
+                <div class="card-img-holder">
+
+                    <img src="../static/image/cabinet.jpg"
+                    alt="Office Cabinet">
+
+                </div>
+
+                <div class="card-details">
+
+                    <h4>Wooden Office Cabinet</h4>
+
+                    <p class="price">
+                        Rs. 5,500
+                    </p>
+
+                    <button class="cart-btn">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </article>
+
+        </section>
+
+        <!-- Load More -->
+
+        <div class="load-more">
+
+            <button id="loadBtn">
+                Load More Furniture
+            </button>
+
+        </div>
+
+    </main>
+
 </div>
+<!-- ===========================
+        FOOTER
+=========================== -->
 
-<!-- FURNITURE GRID SECTION (8 Items) -->
-<div class="section">
-
-  <div class="title">Available Furniture</div>
-
-  <div class="furniture-grid">
-
-    <!-- Item 1 -->
-    <div class="card">
-      <span class="badge-new">Newly Added</span>
-      <img src="../static/image/studychair.jpg" alt="Study Chair">
-      <h4>Ergonomic Study Chair</h4>
-      <p>Rs. 2,500</p>
-    </div>
-
-    <!-- Item 2 -->
-    <div class="card">
-      <img src="../static/image/sofa.jpg" alt="Sofa Set">
-      <h4>Comfortable 3-Seater Sofa</h4>
-      <p>Rs. 18,500</p>
-    </div>
-
-    <!-- Item 3 -->
-    <div class="card">
-      <img src="../static/image/table.jpg" alt="Wooden Desk">
-      <h4>Wooden Study/Office Table</h4>
-      <p>Rs. 4,000</p>
-    </div>
-
-    <!-- Item 4 -->
-    <div class="card">
-      <img src="../static/image/wardrobe.jpg" alt="Wardrobe">
-      <h4>Wooden 2-Door Wardrobe</h4>
-      <p>Rs. 9,500</p>
-    </div>
-
-    <!-- Item 5 -->
-    <div class="card">
-      <img src="../static/image/bed.jpg" alt="Single Bed">
-      <h4>Wooden Single Bed Frame</h4>
-      <p>Rs. 7,000</p>
-    </div>
-
-    <!-- Item 6 -->
-    <div class="card">
-      <img src="../static/image/bookshelf.jpg" alt="Bookshelf">
-      <h4>4-Tier Compact Bookshelf</h4>
-      <p>Rs. 3,200</p>
-    </div>
-
-    <!-- Item 7 -->
-    <div class="card">
-      <img src="../static/image/dining.jpg" alt="Dining Table">
-      <h4>Dining Table with 4 Chairs</h4>
-      <p>Rs. 12,000</p>
-    </div>
-
-    <!-- Item 8 -->
-    <div class="card">
-      <img src="../static/image/shoerack.jpg" alt="Shoe Rack">
-      <h4>Plastic Multi-layer Shoe Rack</h4>
-      <p>Rs. 850</p>
-    </div>
-
-  </div>
-
-  <div class="explore-btn">
-    <button>Load More Furniture</button>
-  </div>
-
-</div>
-
-<!-- FOOTER -->
 <footer class="footer">
 
-  <div class="footer-container">
+    <div class="footer-container">
 
-    <div class="footer-column">
-      <h2><span>Sasto</span> Bazaar</h2>
-      <p>Your Unused Items, Someone Else's Treasure.</p>
-      <p>Hamro Deal is a platform to buy and sell second-hand items easily and safely.</p>
+        <div class="footer-column">
+
+            <h2>
+                <span>Sasto</span> Bazaar
+            </h2>
+
+            <p>
+                Your Unused Items, Someone Else's Treasure.
+            </p>
+
+            <p>
+                SastoBazaar is a platform to buy and sell second-hand items
+                easily and safely.
+            </p>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li><a href="./Homepage.html">Home</a></li>
+                <li><a href="./explorepage.html">Browse Items</a></li>
+                <li><a href="./aboutus.html">About Us</a></li>
+                <li><a href="./login.html">Login / Sign Up</a></li>
+
+            </ul>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>Categories</h3>
+
+            <ul>
+
+                <li><a href="./books.html">Books</a></li>
+                <li><a href="./electronics.html">Electronics</a></li>
+                <li><a href="./furniture.html">Furniture</a></li>
+                <li><a href="./sports.html">Sports & Fitness</a></li>
+                <li><a href="./bags.html">Bags</a></li>
+                <li><a href="./stationery.html">Stationery</a></li>
+
+            </ul>
+
+        </div>
+
     </div>
 
-    <div class="footer-column">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="Homepage.html">Home</a></li>
-        <li><a href="#">Browse Items</a></li>
-        <li><a href="#">Categories</a></li>
-        <li><a href="#">About us</a></li>
-        <li><a href="#">Login / Sign up</a></li>
-      </ul>
+    <hr>
+
+    <div class="footer-bottom">
+
+        <p>📍 Kathmandu, Nepal</p>
+
+        <p>© 2026 SastoBazaar. All rights reserved.</p>
+
+        <div class="footer-links">
+
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Help Center</a>
+
+        </div>
+
     </div>
-
-    <div class="footer-column">
-      <h3>Categories</h3>
-      <ul>
-        <li><a href="electronics.html">Electronics</a></li>
-        <li><a href="furniture.html">Furniture</a></li>
-        <li><a href="#">Stationery</a></li>
-        <li><a href="books.html">Books</a></li>
-        <li><a href="#">Bags</a></li>
-      </ul>
-    </div>
-
-  </div>
-
-  <hr>
-
-  <div class="footer-bottom">
-    <p>📍 Kathmandu, Nepal</p>
-    <p>© 2024 SastoBazaar. All rights reserved.</p>
-
-    <div class="footer-links">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms & Conditions</a>
-      <a href="#">Help Center</a>
-    </div>
-  </div>
 
 </footer>
+
+<!-- ===========================
+        LOAD MORE SCRIPT
+=========================== -->
+
+<script>
+
+const loadBtn = document.getElementById("loadBtn");
+
+if (loadBtn) {
+
+    loadBtn.addEventListener("click", function () {
+
+        document.querySelectorAll(".product-card.hidden").forEach(function (card) {
+
+            card.classList.remove("hidden");
+
+        });
+
+        loadBtn.style.display = "none";
+
+    });
+
+}
+
+</script>
 
 </body>
 </html>

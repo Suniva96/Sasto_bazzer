@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Sports & Fitness | SastoBazaar</title>
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="../static/css/sports.css">
+    <!-- Category CSS -->
+    <link rel="stylesheet" href="../static/css/category.css">
+
 </head>
+
 <body>
 
-<!-- ================= NAVBAR ================= -->
+<!-- ===========================
+        NAVBAR
+=========================== -->
 
 <nav class="navbar">
 
@@ -24,30 +31,66 @@
     </div>
 
     <div class="search-box">
-        <input type="text" placeholder="Search Sports Products...">
+
+        <input
+            type="text"
+            placeholder="Search Sports Products...">
+
         <button>
             <i class="fa-solid fa-search"></i>
         </button>
+
     </div>
 
     <ul class="nav-links">
-        <li><a href="Homepage.html"><i class="fa fa-home"></i> Home</a></li>
-        <li><a href="aboutus.html"><i class="fa fa-circle-info"></i> About</a></li>
-        <li><a href="#"><i class="fa fa-cart-shopping"></i> Cart</a></li>
-        <li><a href="login.html"><i class="fa fa-user"></i> Account</a></li>
+
+        <li>
+            <a href="./Homepage.html">
+                <i class="fa fa-home"></i>
+                Home
+            </a>
+        </li>
+
+        <li>
+            <a href="./aboutus.html">
+                <i class="fa fa-circle-info"></i>
+                About
+            </a>
+        </li>
+
+        <li>
+            <a href="./cart.html">
+                <i class="fa fa-cart-shopping"></i>
+                Cart
+            </a>
+        </li>
+
+        <li>
+            <a href="./login.html">
+                <i class="fa fa-user"></i>
+                Account
+            </a>
+        </li>
+
     </ul>
 
 </nav>
 
-<!-- ================= HERO ================= -->
+<!-- ===========================
+        HERO
+=========================== -->
 
 <section class="hero">
 
-    <img src="../static/image/explore the market.png" alt="Sports">
+    <img
+        src="../static/image/explore the market.png"
+        alt="Sports & Fitness">
 
 </section>
 
-<!-- ================= MAIN ================= -->
+<!-- ===========================
+        MAIN CONTENT
+=========================== -->
 
 <div class="container">
 
@@ -57,17 +100,37 @@
 
         <h3>Categories</h3>
 
-        <a href="./expolrepage.html">All Products</a>
-        <a href="./books.html">Books</a>
-        <a href="./electronics.html">Electronics</a>
-        <a href="./furniture.html">Furniture</a>
-        <a href="./stationery.html" class="active">Sports & Fitness</a>
-        <a href="./bags.html">Bags</a>
-        <a href="stationery.html">Stationery</a>
+        <a href="./explorepage.html">
+            All Products
+        </a>
+
+        <a href="./books.html">
+            Books
+        </a>
+
+        <a href="./electronics.html">
+            Electronics
+        </a>
+
+        <a href="./furniture.html">
+            Furniture
+        </a>
+
+        <a href="./sports.html" class="active">
+            Sports & Fitness
+        </a>
+
+        <a href="./bags.html">
+            Bags
+        </a>
+
+        <a href="./stationery.html">
+            Stationery
+        </a>
 
     </aside>
 
-    <!-- Content -->
+    <!-- Products -->
 
     <main class="content">
 
@@ -75,253 +138,323 @@
             Sports & Fitness Equipment
         </h2>
 
-        <div class="products">
+        <section class="products">
+            <!-- ===========================
+        PRODUCT 1
+=========================== -->
 
-            <!-- Product 1 -->
+<div class="product-card">
 
-            <div class="card">
+    <span class="badge-new">NEW</span>
 
-                <span class="badge">New</span>
+    <div class="card-img-holder">
+        <img src="../static/image/dumbbells.jpg" alt="Hex Rubber Dumbbells">
+    </div>
 
-                <img src="../static/image/dumbbells.jpg">
+    <div class="card-details">
 
-                <div class="card-content">
+        <h4>Hex Rubber Dumbbells (10kg Pair)</h4>
 
-                    <h3>Hex Rubber Dumbbells</h3>
+        <p class="price">Rs. 4,500</p>
 
-                    <p>10kg Professional Pair</p>
+        <button class="cart-btn">
+            Add to Cart
+        </button>
 
-                    <h4>Rs. 4,500</h4>
-
-                    <button>Add to Cart</button>
-
-                </div>
-
-            </div>
-
-            <!-- Product 2 -->
-
-            <div class="card">
-
-                <img src="../static/image/cricket-bat.jpg">
-
-                <div class="card-content">
-
-                    <h3>English Willow Cricket Bat</h3>
-
-                    <p>Professional Grade</p>
-
-                    <h4>Rs. 6,800</h4>
-
-                    <button>Add to Cart</button>
-
-                </div>
-
-            </div>
-
-            <!-- Product 3 -->
-
-            <div class="card">
-
-                <img src="../static/image/yoga-mat.jpg">
-
-                <div class="card-content">
-
-                    <h3>Yoga Mat</h3>
-
-                    <p>Anti Slip 6mm</p>
-
-                    <h4>Rs.950</h4>
-
-                    <button>Add to Cart</button>
-
-                </div>
-
-            </div>
-
-            <!-- Product 4 -->
-
-            <div class="card">
-
-                <img src="../static/image/football.jpg">
-
-                <div class="card-content">
-
-                    <h3>Nivia Football</h3>
-
-                    <p>Size 5</p>
-
-                    <h4>Rs.1400</h4>
-
-                    <button>Add to Cart</button>
-
-                </div>
-
-            </div>
-
-            <!-- Product 5 -->
-
-            <div class="card">
-
-                <img src="../static/image/badminton.jpg">
-
-                <div class="card-content">
-
-                    <h3>Yonex Badminton Racket</h3>
-
-                    <p>Carbon Fiber Pair</p>
-
-                    <h4>Rs.3200</h4>
-
-                    <button>Add to Cart</button>
-
-                </div>
-
-            </div>
-
-            <!-- Product 6 -->
-
-            <div class="card">
-
-                <img src="../static/image/treadmill.jpg">
-
-                <div class="card-content">
-
-                    <h3>Foldable Treadmill</h3>
-
-                    <p>Home Workout</p>
-
-                    <h4>Rs.18500</h4>
-
-                    <button>Add to Cart</button>
-
-                </div>
-
-            </div>
-
-            <!-- Hidden Product -->
-
-            <div class="card hidden">
-
-                <img src="../static/image/resistance-bands.jpg">
-
-                <div class="card-content">
-
-                    <h3>Resistance Bands</h3>
-
-                    <p>Set of 5</p>
-
-                    <h4>Rs.750</h4>
-
-                    <button>Add to Cart</button>
-
-                </div>
-
-            </div>
-
-            <!-- Hidden Product -->
-
-            <div class="card hidden">
-
-                <img src="../static/image/punching-bag.jpg">
-
-                <div class="card-content">
-
-                    <h3>Punching Bag</h3>
-
-                    <p>Heavy Duty</p>
-
-                    <h4>Rs.2100</h4>
-
-                    <button>Add to Cart</button>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="load-more">
-
-            <button id="loadBtn">
-                Load More Equipment
-            </button>
-
-        </div>
-
-    </main>
+    </div>
 
 </div>
 
-<!-- ================= FOOTER ================= -->
+<!-- ===========================
+        PRODUCT 2
+=========================== -->
+
+<div class="product-card">
+
+    <div class="card-img-holder">
+        <img src="../static/image/cricket-bat.jpg" alt="English Willow Cricket Bat">
+    </div>
+
+    <div class="card-details">
+
+        <h4>English Willow Cricket Bat</h4>
+
+        <p class="price">Rs. 6,800</p>
+
+        <button class="cart-btn">
+            Add to Cart
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ===========================
+        PRODUCT 3
+=========================== -->
+
+<div class="product-card">
+
+    <div class="card-img-holder">
+        <img src="../static/image/yoga-mat.jpg" alt="Yoga Mat">
+    </div>
+
+    <div class="card-details">
+
+        <h4>Yoga Mat (6mm Anti-Slip)</h4>
+
+        <p class="price">Rs. 950</p>
+
+        <button class="cart-btn">
+            Add to Cart
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ===========================
+        PRODUCT 4
+=========================== -->
+
+<div class="product-card">
+
+    <div class="card-img-holder">
+        <img src="../static/image/football.jpg" alt="Football">
+    </div>
+
+    <div class="card-details">
+
+        <h4>Nivia Football (Size 5)</h4>
+
+        <p class="price">Rs. 1,400</p>
+
+        <button class="cart-btn">
+            Add to Cart
+        </button>
+
+    </div>
+
+</div>
+<!-- ===========================
+        PRODUCT 5
+=========================== -->
+
+<div class="product-card">
+
+    <div class="card-img-holder">
+        <img src="../static/image/badminton.jpg" alt="Yonex Badminton Racket">
+    </div>
+
+    <div class="card-details">
+
+        <h4>Yonex Badminton Racket</h4>
+
+        <p class="price">Rs. 3,200</p>
+
+        <button class="cart-btn">
+            Add to Cart
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ===========================
+        PRODUCT 6
+=========================== -->
+
+<div class="product-card">
+
+    <div class="card-img-holder">
+        <img src="../static/image/treadmill.jpg" alt="Foldable Treadmill">
+    </div>
+
+    <div class="card-details">
+
+        <h4>Foldable Treadmill</h4>
+
+        <p class="price">Rs. 18,500</p>
+
+        <button class="cart-btn">
+            Add to Cart
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ===========================
+        PRODUCT 7 (Hidden)
+=========================== -->
+
+<div class="product-card hidden">
+
+    <div class="card-img-holder">
+        <img src="../static/image/resistance-bands.jpg" alt="Resistance Bands">
+    </div>
+
+    <div class="card-details">
+
+        <h4>Resistance Bands Set</h4>
+
+        <p class="price">Rs. 750</p>
+
+        <button class="cart-btn">
+            Add to Cart
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ===========================
+        PRODUCT 8 (Hidden)
+=========================== -->
+
+<div class="product-card hidden">
+
+    <div class="card-img-holder">
+        <img src="../static/image/punching-bag.jpg" alt="Punching Bag">
+    </div>
+
+    <div class="card-details">
+
+        <h4>Heavy Duty Punching Bag</h4>
+
+        <p class="price">Rs. 2,100</p>
+
+        <button class="cart-btn">
+            Add to Cart
+        </button>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+        LOAD MORE BUTTON
+=========================== -->
+
+<div class="load-more">
+
+    <button id="loadBtn">
+        Load More Equipment
+    </button>
+
+</div>
+
+</main>
+
+</div>
+<!-- ===========================
+        FOOTER
+=========================== -->
 
 <footer class="footer">
 
-   <footer class="footer">
+    <div class="footer-container">
 
-  <div class="footer-container">
+        <!-- Company -->
 
-    <div class="footer-column">
-      <h2><span>Sasto</span> Bazaar</h2>
-      <p>Your Unused Items, Someone Else's Treasure.</p>
-      <p>Sasto Bazzar is a platform to buy and sell second-hand items easily and safely.</p>
+        <div class="footer-column">
+
+            <h2>
+                <span>Sasto</span> Bazaar
+            </h2>
+
+            <p>
+                Your Unused Items, Someone Else's Treasure.
+            </p>
+
+            <p>
+                SastoBazaar is a platform to buy and sell second-hand items
+                easily and safely.
+            </p>
+
+        </div>
+
+        <!-- Quick Links -->
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li><a href="./Homepage.html">Home</a></li>
+                <li><a href="./explorepage.html">Browse Items</a></li>
+                <li><a href="./aboutus.html">About Us</a></li>
+                <li><a href="./login.html">Login / Sign Up</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Categories -->
+
+        <div class="footer-column">
+
+            <h3>Categories</h3>
+
+            <ul>
+
+                <li><a href="./books.html">Books</a></li>
+                <li><a href="./electronics.html">Electronics</a></li>
+                <li><a href="./furniture.html">Furniture</a></li>
+                <li><a href="./sports.html">Sports & Fitness</a></li>
+                <li><a href="./bags.html">Bags</a></li>
+                <li><a href="./stationery.html">Stationery</a></li>
+
+            </ul>
+
+        </div>
+
     </div>
 
-    <div class="footer-column">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="Homepage.html">Home</a></li>
-        <li><a href="expolrepage.html">Browse Items</a></li>
-        <li><a href="aboutus.html">About us</a></li>
-        <li><a href="login.html">Login / Sign up</a></li>
-      </ul>
+    <hr>
+
+    <div class="footer-bottom">
+
+        <p>📍 Kathmandu, Nepal</p>
+
+        <p>© 2026 SastoBazaar. All rights reserved.</p>
+
+        <div class="footer-links">
+
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Help Center</a>
+
+        </div>
+
     </div>
-
-    <div class="footer-column">
-      <h3>Categories</h3>
-      <ul>
-        <li><a href="electronics.html">Electronics</a></li>
-        <li><a href="furniture.html">Furniture</a></li>
-        <li><a href="stationery.html">Stationery</a></li>
-        <li><a href="books.html">Books</a></li>
-        <li><a href="bags.html">Bags</a></li>
-        <li><a href="sports.html">Sports & Fitness</a></li>
-      </ul>
-    </div>
-
-  </div>
-
-  <hr>
-
-  <div class="footer-bottom">
-    <p>📍 Kathmandu, Nepal</p>
-    <p>© 2024 SastoBazaar. All rights reserved.</p>
-
-    <div class="footer-links">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms & Conditions</a>
-      <a href="#">Help Center</a>
-    </div>
-  </div>
 
 </footer>
 
-
-</footer>
-
-<!-- ================= JS ================= -->
+<!-- ===========================
+        LOAD MORE SCRIPT
+=========================== -->
 
 <script>
 
-const btn=document.getElementById("loadBtn");
+const loadBtn = document.getElementById("loadBtn");
 
-btn.onclick=function(){
+if (loadBtn) {
 
-document.querySelectorAll(".hidden").forEach(card=>{
-card.classList.remove("hidden");
-});
+    loadBtn.addEventListener("click", function () {
 
-btn.style.display="none";
+        const hiddenProducts = document.querySelectorAll(".product-card.hidden");
+
+        hiddenProducts.forEach(function (product) {
+            product.classList.remove("hidden");
+        });
+
+        loadBtn.style.display = "none";
+
+    });
 
 }
 
