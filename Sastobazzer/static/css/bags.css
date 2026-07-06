@@ -1,0 +1,473 @@
+/* ==========================================================================
+   1. GLOBAL SYSTEM VARIABLES, RESET & CORE SYSTEM ARCHITECTURE
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f7f7f7;
+    color: #333333;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   2. NAVBAR STYLING (MATCHING HOME PAGE GREEN SCHEME PARAMS PERFECTLY)
+   ========================================================================== */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 70px;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.nav-inner {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 30px;
+}
+
+/* BRAND LOGO TYPOGRAPHY LINK MAPS */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+    flex-shrink: 0;
+}
+
+.logo span {
+    color: #268c4d; /* High performance structural brand text matching node accent */
+}
+
+/* CENTRAL CORE SEARCH COMPONENT BAR ARRANGEMENT */
+.search-wrap {
+    flex: 1;
+    max-width: 450px;
+    display: flex;
+    border: 1px solid #dddddd;
+    border-radius: 30px;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.search-wrap input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    background: transparent;
+    color: #333333;
+}
+
+.search-wrap button {
+    border: none;
+    background: #2d7a3a; /* Standardized Green Brand Accent */
+    color: white;
+    padding: 10px 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-wrap button:hover {
+    background: #23632f;
+}
+
+/* INLINE LINK SECTIONS HORIZONTAL LIST */
+.nav-links{
+    max-width:1200px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    list-style:none;
+    margin:0 auto;
+    padding:0 20px;
+    order:2; 
+}
+
+.nav-links li{
+    flex:1 1 calc(33.33% - 8px);
+    max-width:calc(33.33% - 8px);
+    text-align:center;
+}
+
+.nav-links a{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:6px;
+    padding:10px 8px;
+    font-size:0.95rem;
+    color:#333;
+    text-decoration:none;
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+    color:#2d7a3a;
+    background:transparent;
+}
+/* ==========================================================================
+   3. INTERNAL BAGS CATEGORY COMPACT HERO BANNER MODULE STYLES
+   ========================================================================== */
+.category-hero {
+    margin-top: 70px;
+    width: calc(100% - 40px);
+    height: 250px;
+    margin: 90px 20px 20px 20px; /* Aligned margins calculation parameters to homepage grid bounds */
+    border-radius: 15px; /* Precision matched 15px rounded corner definitions */
+    overflow: hidden;
+    position: relative;
+    background: #231f20; /* Custom style warm backdrop for accessory layers */
+}
+
+.category-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.55; /* Overlay backdrop contrast mask layout protection */
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 60px;
+    transform: translateY(-50%);
+    color: white;
+    z-index: 5;
+    max-width: 550px;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.hero-text p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* ==========================================================================
+   4. FULL WIDTH NO-SIDEBAR RESPONSIVE INVENTORY DISPLAY GRID MATRIX
+   ========================================================================== */
+.content-section {
+    padding: 40px;
+    max-width: 1300px; /* Protects grid stretching limits layout on massive multi-row views */
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #333333;
+}
+
+/* Core Responsive Auto-Fit Layout Calculation Track Module */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* PRODUCT PREVIEW COMPONENT CARD DECK PACK */
+.product-card {
+    position: relative;
+    background: #ffffff;
+    border-radius: 15px; /* Matches layout boundary corner structures */
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card:hover {
+    transform: translateY(-8px); /* Identical translation physical acceleration track rule drops */
+}
+
+.card-img-holder {
+    width: 100%;
+    height: 220px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.card-img-holder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Unified cover cropping layout specifications match */
+}
+
+.card-details {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-card h4 {
+    padding: 15px 15px 5px;
+    font-size: 20px;
+    color: #333333;
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+.product-card .price {
+    padding: 0 15px 20px;
+    color: #2d7a3a; /* Green Price text identifier tokens mapping rules */
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.product-card .badge-new {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #408527;
+    color: white;
+    padding: 5px 12px;
+    font-size: 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    z-index: 10;
+}
+
+/* Runtime Hidden Token Toggle Node Class Selector Rule */
+.product-card.hidden {
+    display: none !important;
+}
+
+/* EXPLORE TRIPPERS LOAD ACTION ROWS BUTTONS STYLES */
+.explore-btn-row {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.explore-btn-row button {
+    background: #2d7a3a;
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.explore-btn-row button:hover {
+    background: #23632f;
+}
+
+/* ==========================================================================
+   5. DEEP OCEAN BLENDED GLOBAL STRIP FOOTER CORES LAWS MAP
+   ========================================================================== */
+.footer {
+    background: linear-gradient(135deg, #07131d, #0c1f2d);
+    color: white;
+    padding: 50px 40px 20px;
+    margin-top: 60px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.footer-column h2 span {
+    color: #42c84d;
+}
+
+.footer-column p,
+.footer-column ul li a {
+    color: #d0d0d0;
+    font-size: 14px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #42c84d;
+    padding-left: 5px;
+}
+
+.footer-divider {
+    border: none;
+    border-top: 1px solid #2c3b48;
+    margin: 30px 0 20px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #d0d0d0;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #42c84d;
+}
+
+/* ==========================================================================
+   6. RESPONSIVE SCREEN VIEWPORTS MEDIA BREAKPOINTS MATRIX TRACKING RULES
+   ========================================================================== */
+@media(max-width:992px) {
+    .hero-text {
+        left: 40px;
+    }
+    .hero-text h1 {
+        font-size: 30px;
+    }
+}
+
+@media(max-width:768px) {
+    .nav-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px 20px;
+        gap: 12px;
+    }
+
+    .search-wrap {
+        width: 100%;
+        max-width: 100%;
+        order: 3;
+    }
+
+    .nav-links{
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+    list-style:none;
+    order:2;
+}
+
+.nav-links li{
+    flex:1 1 30%;
+    text-align:center;
+}
+
+.nav-links a{
+    display:block;
+    padding:10px;
+    font-size:13px;
+}
+
+    .category-hero {
+        height: 200px;
+        margin: 175px 15px 15px 15px; /* Clean tracking margin offset prevents layout overlap bugs */
+        width: calc(100% - 30px);
+    }
+
+    .hero-text{
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    width:90%;
+    max-width:100%;
+    text-align:center;
+}
+
+    .hero-text h1 {
+        font-size: 24px;
+    }
+
+    .hero-text p {
+        font-size: 13px;
+    }
+
+    .content-section {
+        padding: 30px 15px;
+    }
+
+    .section-title {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .category-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+}
+}
+
+@media(max-width:480px) {
+
+    .category-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
+    }
+
+    .card-img-holder{
+        height:140px;
+    }
+
+    .product-card h4{
+        font-size:14px;
+        padding:12px 12px 5px;
+    }
+
+    .product-card .price{
+        font-size:15px;
+        padding:0 12px 15px;
+    }
+
+    .product-card .badge-new{
+        font-size:10px;
+        padding:4px 8px;
+    }
+
+}

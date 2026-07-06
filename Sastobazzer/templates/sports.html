@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sports & Fitness - SastoBazaar</title>
+
+<!-- SYSTEM GLOBAL WORKING CDN ADDRESS FOR FONT AWESOME ICONS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- Linking the newly created structural category layout stylesheet below -->
+<link rel="stylesheet" href="../static/css/sports.css"> 
+</head>
+<body>
+  
+  <!-- NAVBAR MODULE (UNIFIED GREEN BRAND LAYOUT CONFIGURATION) -->
+  <nav>
+    <div class="nav-inner">
+      <!-- Logo Component -->
+      <a href="Homepage.html" class="logo">
+        <i class="fa-solid fa-bag-shopping"></i> Sasto<span>Bazaar</span>
+      </a>
+
+      <!-- Central Search Box Component Wrapper Layout -->
+      <div class="search-wrap">
+        <input type="text" placeholder="Search sports gear, dumbbells, rackets...">
+        <button type="submit" aria-label="Run sports gear query search">
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
+
+      <!-- Navigation Link Options Deck -->
+      <ul class="nav-links">
+        <li><a href="electronics.html"><i class="fa-solid fa-laptop"></i> Electronics</a></li>
+        <li><a href="stationery.html"><i class="fa-solid fa-pen-ruler"></i> Stationery</a></li>
+        <li><a href="books.html"><i class="fa-solid fa-book"></i> Books</a></li>
+        <li><a href="furniture.html"><i class="fa-solid fa-couch"></i> Furniture</a></li>
+        <li><a href="sports.html" class="active"><i class="fa-solid fa-dumbbell"></i> Sports</a></li>
+        <li><a href="bags.html"><i class="fa-solid fa-bag-shopping"></i> Bags</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- SPORTS AND FITNESS COMPACT LANDSCAPE BANNER DISPLAY -->
+  <div class="category-hero sports-bg">
+    <img src="../static/image/sports-banner.jpeg" alt="SastoBazaar Second Hand Gym Equipment Sports Fitness Banner Cover Background">
+    <div class="hero-text">
+      <h1>Pre-loved Sports & Fitness Gear</h1>
+      <p>Premium workout accessories, high-grade gym gear, and sports equipment at unbeatable prices across Nepal.</p>
+    </div>
+  </div>
+
+  <!-- CONTAINER MAIN AREA GRID LIST FOR PRODUCT CARDS -->
+  <main class="content-section">
+    <div class="section-title">Available Gear</div>
+
+    <div class="category-grid">
+      <!-- Item 1 -->
+      <article class="product-card">
+        <span class="badge-new">Newly Added</span>
+        <div class="card-img-holder">
+          <img src="../static/image/dumbbells.jpg" alt="Hex Rubber Coated Professional Weightlifting Dumbbells Pair">
+        </div>
+        <div class="card-details">
+          <h4>Hex Rubber Dumbbells (10kg Pair)</h4>
+          <p class="price">Rs. 4,500</p>
+        </div>
+      </article>
+
+      <!-- Item 2 -->
+      <article class="product-card">
+        <div class="card-img-holder">
+          <img src="../static/image/cricket-bat.jpg" alt="Premium English Willow Grain Cricket Bat Professional Grade">
+        </div>
+        <div class="card-details">
+          <h4>English Willow Cricket Bat</h4>
+          <p class="price">Rs. 6,800</p>
+        </div>
+      </article>
+
+      <!-- Item 3 -->
+      <article class="product-card">
+        <div class="card-img-holder">
+          <img src="../static/image/yoga-mat.jpg" alt="High Density Anti Slip Durable Fitness Workout Exercise Yoga Mat">
+        </div>
+        <div class="card-details">
+          <h4>Anti-Slip Yoga Mat (6mm)</h4>
+          <p class="price">Rs. 950</p>
+        </div>
+      </article>
+
+      <!-- Item 4 -->
+      <article class="product-card">
+        <div class="card-img-holder">
+          <img src="../static/image/football.jpg" alt="Match Professional Weight Size 5 Soccer Football Ball">
+        </div>
+        <div class="card-details">
+          <h4>Nivia FIFA Pro Football (Size 5)</h4>
+          <p class="price">Rs. 1,400</p>
+        </div>
+      </article>
+
+      <!-- Item 5 -->
+      <article class="product-card">
+        <div class="card-img-holder">
+          <img src="../static/image/badminton.jpg" alt="Carbon Fiber Lightweight High Tension Badminton Rackets Pair">
+        </div>
+        <div class="card-details">
+          <h4>Yonex Carbon Fiber Badminton Rackets (Pair)</h4>
+          <p class="price">Rs. 3,200</p>
+        </div>
+      </article>
+
+      <!-- Item 6 -->
+      <article class="product-card">
+        <div class="card-img-holder">
+          <img src="../static/image/treadmill.jpg" alt="Foldable Electronic Home Fitness Workout Running Motorized Treadmill">
+        </div>
+        <div class="card-details">
+          <h4>Manual Foldable Running Treadmill</h4>
+          <p class="price">Rs. 18,500</p>
+        </div>
+      </article>
+
+      <!-- HIDDEN REVEALABLE TILES -->
+      <article class="product-card hidden">
+        <div class="card-img-holder">
+          <img src="../static/image/resistance-bands.jpg" alt="Heavy Duty Loop Resistance Exercise Workout Fitness Bands Set">
+        </div>
+        <div class="card-details">
+          <h4>Latex Fitness Resistance Bands (Set of 5)</h4>
+          <p class="price">Rs. 750</p>
+        </div>
+      </article>
+
+      <article class="product-card hidden">
+        <div class="card-img-holder">
+          <img src="../static/image/punching-bag.jpg" alt="Heavy Hanging MMA Boxing Kickboxing Punching Bag Training Tool">
+        </div>
+        <div class="card-details">
+          <h4>Hanging Boxing Punching Bag (Unfilled)</h4>
+          <p class="price">Rs. 2,100</p>
+        </div>
+      </article>
+    </div>
+
+    <!-- Exploration Interactive Trigger Action Row -->
+    <div class="explore-btn-row">
+      <button id="load-more-sports-trigger">Load More Equipment</button>
+    </div>
+  </main>
+
+  <!-- PLATFORM GLOBAL INTEGRATED FOOTER COMPONENT MODULAR BLOCK VIEW -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h2><span>Sasto</span> Bazaar</h2>
+        <p>Your Unused Items, Someone Else's Treasure.</p>
+        <p>Sasto Bazzar is a platform to buy and sell second-hand items easily and safely.</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="Homepage.html">Home</a></li>
+          <li><a href="#">Browse Items</a></li>
+          <li><a href="#">Categories</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Login / Sign up</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="electronics.html">Electronics</a></li>
+          <li><a href="furniture.html">Furniture</a></li>
+          <li><a href="stationery.html">Stationery</a></li>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="sports.html">Sports</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+      <p>📍 Kathmandu, Nepal</p>
+      <p>© 2024 SastoBazaar. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Help Center</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ACTION LOGIC DEPLOYMENT CONTROLLER RUNTIME -->
+  <script>
+    document.getElementById('load-more-sports-trigger').addEventListener('click', function() {
+      const hiddenSportsCards = document.querySelectorAll('.category-grid .product-card.hidden');
+      const processThresholdCountLimit = 2;
+      
+      for (let i = 0; i < processThresholdCountLimit && i < hiddenSportsCards.length; i++) {
+        hiddenSportsCards[i].classList.remove('hidden');
+      }
+      
+      if (document.querySelectorAll('.category-grid .product-card.hidden').length === 0) {
+        this.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>

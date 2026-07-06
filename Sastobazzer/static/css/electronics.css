@@ -1,0 +1,171 @@
+/* ==========================================
+   MAIN NAVBAR CATEGORY HIGHLIGHT
+   ========================================== */
+
+.nav-links a.active {
+    color: #2d7a3a !important;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #2d7a3a;
+    background: transparent;
+}
+
+/* ==========================================
+   ELECTRONICS HERO BANNER
+   ========================================== */
+
+.electronics-hero {
+    position: relative;
+    width: 100%;
+    height: clamp(200px, 35vw, 300px);
+    background: #0b0f19;
+    overflow: hidden;
+    margin-top: 70px;
+}
+
+.electronics-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+    filter: grayscale(20%) contrast(110%);
+}
+
+.electronics-hero .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+}
+
+.electronics-hero .hero-text h1 {
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: .5px;
+    text-shadow: 0 2px 5px rgba(0,0,0,.7);
+}
+
+.electronics-hero .hero-text p {
+    font-size: clamp(.95rem, 2vw, 1.2rem);
+    font-weight: 300;
+    opacity: .95;
+    text-shadow: 0 1px 3px rgba(0,0,0,.6);
+}
+
+/* ==========================================
+   PRODUCT GRID
+   ========================================== */
+
+.electronics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #ededed;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 12px;
+    background: #fafafa;
+}
+
+/* ==========================================
+   MOBILE RESPONSIVE
+   ========================================== */
+
+@media (max-width:768px){
+
+    .electronics-hero{
+        height:220px;
+        margin-top: 170px;
+    }
+
+    .electronics-hero .hero-text{
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50% );
+       width: 95%;
+    }
+
+    .electronics-hero .hero-text h1{
+        font-size:1.8rem;
+    }
+
+    .electronics-hero .hero-text p{
+        font-size:.95rem;
+    }
+
+    .nav-links{
+        width:100%;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        align-items:center;
+        gap:8px;
+        list-style:none;
+        margin:0;
+        padding:0;
+    }
+
+    .nav-links li{
+        flex:1 1 calc(33.33% - 8px);
+        max-width:calc(33.33% - 8px);
+        text-align:center;
+    }
+
+    .nav-links a{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        gap:6px;
+        padding:10px 8px;
+        font-size:13px;
+        color:#333;
+        text-decoration:none;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active{
+        color:#2d7a3a;
+        background:transparent;
+    }
+
+    .electronics-grid{
+        grid-template-columns:repeat(auto-fill,minmax(170px,1fr));
+        gap:15px;
+    }
+
+    .card img{
+        height:170px;
+    }
+
+}
