@@ -329,22 +329,24 @@ nav{
 
 /* EXPLORE BUTTON */
 .explore-btn{
-    text-align:center;
-    margin-top:35px;
+    text-align: center;
+    margin-top: 35px;
 }
 
-.explore-btn button{
-    background:#2d7a3a;
-    color:white;
-    border:none;
-    padding:14px 30px;
-    border-radius:8px;
-    font-size:16px;
-    cursor:pointer;
+.explore-link{
+    display: inline-block;
+    background: #2d7a3a;
+    color: white;
+    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.explore-btn button:hover{
-    background:#23632f;
+.explore-link:hover{
+    background: #23632f;
 }
 
 /* ── FOOTER ── */
