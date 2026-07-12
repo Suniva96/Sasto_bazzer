@@ -7,6 +7,23 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="../static/css/home.css">
+<style>
+.cart-count{
+    display:none;
+    align-items:center;
+    justify-content:center;
+    min-width:16px;
+    height:16px;
+    padding:0 4px;
+    margin-left:4px;
+    background:#e0453c;
+    color:#fff;
+    font-size:10px;
+    font-weight:bold;
+    border-radius:50%;
+    vertical-align:middle;
+}
+</style>
 </head>
 
 <body>
@@ -33,7 +50,7 @@
     <ul class="nav-links">
       <li><a href="Homepage.html"><i class="fa fa-house"></i> Home</a></li>
       <li><a href="aboutus.html"><i class="fa fa-circle-info"></i> About</a></li>
-      <li><a href="#"><i class="fa fa-cart-shopping"></i> Cart</a></li>
+      <li><a href="cart.html"><i class="fa fa-cart-shopping"></i> Cart <span class="cart-count">0</span></a></li>
       <li><a href="login.html"><i class="fa fa-user"></i> Account</a></li>    </ul>
 
   </div>
@@ -287,6 +304,9 @@ dots.forEach((dot, index) => {
 
 setInterval(nextSlide, 5000);
 </script>
+
+<!-- Cart logic -->
+<script src="../static/js/cart.js"></script>
 
 </body>
 </html>
